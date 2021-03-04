@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "be_hit_by_team_a": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "source_entity": {
+              "type": "minecraft:player",
+              "equipment": {
+                "mainhand": {
+                  "item": "minecraft:pink_dye"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["be_hit_by_team_a"]
+  ],
+  "rewards": {
+    "function": "mcf:system/setting/team_member_setting/set_team_with_hit/team_a"
+  }
+}
