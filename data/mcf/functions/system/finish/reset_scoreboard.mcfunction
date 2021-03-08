@@ -9,19 +9,16 @@
 
 ## Remove scoreboards of gamemode
 scoreboard objectives remove Phase
-scoreboard objectives remove PrevPhase
-scoreboard objectives remove Death
-scoreboard objectives remove Kill
-scoreboard objectives remove KillTemp
 ## Remove scoreboards of time
 scoreboard objectives remove Tick
 scoreboard objectives remove Second
 scoreboard objectives remove Minute
+scoreboard objectives remove CountTick
 scoreboard objectives remove RestSecond
 scoreboard objectives remove TotalSecond
 scoreboard objectives remove 60
 ## Remove scoreboards for participants
-scoreboard objectives remove Participant
+scoreboard objectives remove PlayerNumber
 scoreboard objectives remove NumParticipant
 ## Remove scoreboards for setting phase - common
 scoreboard objectives remove ThrowItem
@@ -90,7 +87,13 @@ scoreboard objectives remove VisibleNamePrv
 scoreboard objectives remove VisibleInvisPrv
 scoreboard objectives remove VisibleDeathPrv
 scoreboard objectives remove SetTeamManualPrv
+## Remove scoreboards for landing phase
+scoreboard objectives remove OnGround
+## Remove scoreboards for preparation phase
+scoreboard objectives remove UseBanner
 
 ## Reset objectives
 scoreboard players reset #mcf
+scoreboard players reset #mcf_red
+scoreboard players reset #mcf_blue
 scoreboard players reset @a

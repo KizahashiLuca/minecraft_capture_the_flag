@@ -8,7 +8,7 @@
 #############################################################
 
 ## Add a tag
-tag @a[tag=Participant] add NotSetTeam
+tag @a[tag=MCF_Player] add MCF_NotSetTeam
 
 ## Change to team member
 execute if score #mcf SetTeamManual matches 0 run function mcf:system/setting/team_member_setting/random_member_set

@@ -7,11 +7,12 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
-## ongame main
-# execute if score #mcf Phase matches 99 run function mcf:system/onpause/main
-# execute if score #mcf Phase matches 22 run function mcf:system/finish/game_exit
-# execute if score #mcf Phase matches 21 if score #mcf IsTeam matches 0 run function mcf:system/ongame_individual/main
-# execute if score #mcf Phase matches 21 if score #mcf IsTeam matches 1 run function mcf:system/ongame_team/main
-# execute if score #mcf Phase matches 20 run function mcf:system/preparation/main
-# execute if score #mcf Phase matches 19 run function mcf:system/pre_preparation/main
+## ontick
+execute if score #mcf Phase matches 72 run function mcf:system/finish/game_team_b_win
+execute if score #mcf Phase matches 71 run function mcf:system/finish/game_team_a_win
+execute if score #mcf Phase matches 70 run function mcf:system/finish/game_draw
+execute if score #mcf Phase matches 60 run function mcf:system/phase_of_war/main
+execute if score #mcf Phase matches 40 run function mcf:system/phase_of_preparation/main
+execute if score #mcf Phase matches 30 run function mcf:system/phase_of_landing/main
+execute if score #mcf Phase matches 20 run function mcf:system/phase_of_waiting/main
 execute if score #mcf Phase matches 0..17 run function mcf:system/setting/branch

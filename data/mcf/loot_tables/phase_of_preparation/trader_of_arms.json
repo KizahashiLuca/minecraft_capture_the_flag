@@ -1,0 +1,33 @@
+{
+  "type": "generic",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:villager_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                ["",{"text":"武器商人","color":"light_purple","bold":false,"italic":false}]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                ["",{"text":"右クリックで使用","color":"purple","bold":false,"italic":false}]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Tags:[\"MCFitem\"],EntityTag:{VillagerData:{profession:nitwit,level:5,type:taiga},Offers:{Recipes:[{buy:{id:\"minecraft:string\",Count:2},sell:{id:\"minecraft:bow\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:string\",Count:4},sell:{id:\"minecraft:crossbow\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:stick\",Count:16},sell:{id:\"minecraft:arrow\",Count:64},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:oak_planks\",Count:5},sell:{id:\"minecraft:stone_pickaxe\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:cobblestone\",Count:5},sell:{id:\"minecraft:iron_pickaxe\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:iron_ingot\",Count:5},sell:{id:\"minecraft:diamond_pickaxe\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:oak_planks\",Count:5},sell:{id:\"minecraft:stone_axe\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:cobblestone\",Count:5},sell:{id:\"minecraft:iron_axe\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:iron_ingot\",Count:5},sell:{id:\"minecraft:diamond_axe\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:oak_planks\",Count:5},sell:{id:\"minecraft:stone_sword\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:cobblestone\",Count:5},sell:{id:\"minecraft:iron_sword\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:iron_ingot\",Count:5},sell:{id:\"minecraft:diamond_sword\",Count:1},rewardExp:1b,maxUses:9999999}]},Marker:0b,Invulnerable:1b,NoAI:1b,DeathLootTable:\"mcf:phase_of_preparation/empty\",CustomNameVisible:0b}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

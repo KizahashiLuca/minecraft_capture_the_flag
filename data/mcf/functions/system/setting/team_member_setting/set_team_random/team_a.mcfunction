@@ -8,6 +8,6 @@
 #############################################################
 
 ## Set own team a
-tag @s remove NotSetTeam
+tag @s remove MCF_NotSetTeam
 team join TeamA @s
 tellraw @s ["",{"text":"[チーム設定] あなたは ","color":"green"},{"text":"赤チーム","color":"red","bold":true},{"text":" に設定されました。","color":"green"}]

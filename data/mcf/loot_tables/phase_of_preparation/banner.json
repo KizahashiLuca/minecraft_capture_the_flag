@@ -1,0 +1,35 @@
+{
+  "type": "generic",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                ["",{"text":"フラッグ設置用アイテム","color":"light_purple","bold":false,"italic":false}]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                ["",{"text":"使用者中心に 5x5x3m の範囲にバナー生成","color":"white","bold":false,"italic":false}],
+                ["",{"text":"","color":"white","bold":false,"italic":false}],
+                ["",{"text":"右クリックで使用","color":"purple","bold":false,"italic":false}]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Tags:[\"MCFitem\"],EntityTag:{Invisible:1b,Marker:0b,Invulnerable:0b,Health:1.0f,Silent:1b,NoAI:1b,DeathLootTable:\"mcf:phase_of_preparation/empty\",CustomNameVisible:0b}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

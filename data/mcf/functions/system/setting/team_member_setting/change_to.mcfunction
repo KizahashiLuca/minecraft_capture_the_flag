@@ -14,8 +14,9 @@ clear @p[tag=MCF_Host]
 playsound minecraft:ui.button.click master @p[tag=MCF_Host] ~ ~ ~ 1 1 1
 
 ## Set team
+tag @p[tag=MCF_Host] remove MCF_NotSetTeam
 execute if score #mcf Phase matches 5 run team join TeamA @p[tag=MCF_Host]
-execute if score #mcf Phase matches 5 run replaceitem entity @s armor.head minecraft:pink_dye
+execute if score #mcf Phase matches 5 run replaceitem entity @p[tag=MCF_Host] armor.head minecraft:pink_dye
 
 ## Set inventory
 function mcf:system/setting/team_member_setting/set_inventory

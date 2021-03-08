@@ -8,6 +8,8 @@
 #############################################################
 
 ## Reset game
+#### Set wall
+function mcf:system/phase_of_war/set_wall
 #### Reset teams
 function mcf:system/finish/reset_team
 #### Reset world

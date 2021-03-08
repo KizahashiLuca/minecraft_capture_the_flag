@@ -8,10 +8,10 @@
 #############################################################
 
 ## Set own team b
-tag @s remove NotSetTeam
+tag @s remove MCF_NotSetTeam
 team join TeamB @s
 tellraw @s ["",{"text":"[チーム設定] あなたは ","color":"green"},{"text":"青チーム","color":"blue","bold":true},{"text":" に設定されました。","color":"green"}]
-loot replace entity @s armor.head loot mcf:team_member_setting/player_head/team_b
+loot replace entity @s armor.head loot mcf:setting/team_member_setting/player_head/team_b
 
 advancement revoke @s only mcf:system/set_team/be_hit_by_team_b
 

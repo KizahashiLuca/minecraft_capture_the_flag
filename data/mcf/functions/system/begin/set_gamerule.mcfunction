@@ -12,18 +12,18 @@ gamerule announceAdvancements false
 gamerule commandBlockOutput false
 gamerule disableElytraMovementCheck false
 gamerule disableRaids false
-gamerule doDaylightCycle true
+gamerule doDaylightCycle false
 gamerule doEntityDrops true
 gamerule doFireTick true
 gamerule doInsomnia true
 gamerule doImmediateRespawn true
 gamerule doLimitedCrafting false
 gamerule doMobLoot true
-gamerule doMobSpawning true
+gamerule doMobSpawning false
 gamerule doPatrolSpawning true
 gamerule doTileDrops true
 gamerule doTraderSpawning true
-gamerule doWeatherCycle true
+gamerule doWeatherCycle false
 gamerule drowningDamage true
 gamerule fallDamage true
 gamerule fireDamage true
@@ -37,7 +37,7 @@ gamerule mobGriefing true
 gamerule naturalRegeneration true
 # gamerule playersSleepingPercentage 100
 gamerule randomTickSpeed 3
-gamerule reducedDebugInfo true
+gamerule reducedDebugInfo false
 gamerule sendCommandFeedback false
 gamerule showDeathMessages true
 gamerule spawnRadius 10

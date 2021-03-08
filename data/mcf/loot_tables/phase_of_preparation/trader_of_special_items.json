@@ -1,0 +1,33 @@
+{
+  "type": "generic",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:villager_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                ["",{"text":"アイテム商人","color":"light_purple","bold":false,"italic":false}]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                ["",{"text":"右クリックで使用","color":"purple","bold":false,"italic":false}]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Tags:[\"MCFitem\"],EntityTag:{VillagerData:{profession:nitwit,level:5,type:taiga},Offers:{Recipes:[{buy:{id:\"minecraft:glass\",Count:2},buyB:{id:\"minecraft:rabbit_foot\",Count:1},sell:{id:\"minecraft:potion\",tag:{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:8,Amplifier:3,Duration:1200}],display:{Name:'{\"text\":\"跳躍力上昇IVのポーション\",\"italic\":false}'}},Count:3},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:glass\",Count:2},buyB:{id:\"minecraft:sugar\",Count:1},sell:{id:\"minecraft:potion\",tag:{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:1,Amplifier:3,Duration:1200}],display:{Name:'{\"text\":\"俊敏IVのポーション\",\"italic\":false}'}},Count:3},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:glass\",Count:2},buyB:{id:\"minecraft:glistering_melon_slice\",Count:1},sell:{id:\"minecraft:potion\",tag:{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:6,Amplifier:3,Duration:1200}],display:{Name:'{\"text\":\"治癒IVのポーション\",\"italic\":false}'}},Count:3},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:glass\",Count:2},buyB:{id:\"minecraft:pufferfish\",Count:1},sell:{id:\"minecraft:potion\",tag:{Potion:\"minecraft:water\",CustomPotionEffects:[{Id:13,Amplifier:3,Duration:1200}],display:{Name:'{\"text\":\"水中呼吸IVのポーション\",\"italic\":false}'}},Count:3},rewardExp:1b,maxUses:9999999}]},Marker:0b,Invulnerable:1b,NoAI:1b,DeathLootTable:\"mcf:phase_of_preparation/empty\",CustomNameVisible:0b}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

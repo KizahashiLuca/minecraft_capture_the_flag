@@ -17,3 +17,5 @@ effect clear @a[tag=MCF_Player]
 effect give @a[tag=MCF_Player] minecraft:resistance 1000000 6 true
 ## Set advancements
 advancement revoke @a everything
+## Take recipes
+recipe take @a *

@@ -13,7 +13,7 @@ function mcf:system/finish/reset_team
 #### Reset world
 # function mcf:system/finish/reset_world
 #### Reset players
-function mcf:system/finish/reset_player
+# function mcf:system/finish/reset_player
 #### Reset bossbars
 function mcf:system/finish/reset_bossbar
 #### Reset gamemode

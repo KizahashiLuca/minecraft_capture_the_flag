@@ -7,6 +7,9 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
+## Clear inventory
+clear @a
+
 ## Send messages
 function mcf:system/finish/message_stop
 

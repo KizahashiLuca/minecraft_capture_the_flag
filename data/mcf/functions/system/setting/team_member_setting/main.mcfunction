@@ -19,7 +19,8 @@ scoreboard players set @p[tag=MCF_Host] Select21 1
 scoreboard players set @p[tag=MCF_Host] Select23 1
 scoreboard players set @p[tag=MCF_Host] Select28 1
 scoreboard players set @p[tag=MCF_Host] Select31 1
-execute if score #mcf TeamBoolean matches 0 run scoreboard players set @p[tag=MCF_Host] Select34 1
+scoreboard players set @p[tag=MCF_Host] Select34 0
+execute if entity @p[tag=MCF_Player,team=TeamA] if entity @p[tag=MCF_Player,team=TeamB] run scoreboard players set @p[tag=MCF_Host] Select34 1
 
 scoreboard players set @p[tag=MCF_Host,nbt={Inventory:[{Slot:3b,id:"minecraft:pink_dye",tag:{Tags:["MCFsetting","team_a","host_inventory"]}}]}] Select03 0
 scoreboard players set @p[tag=MCF_Host,nbt={Inventory:[{Slot:5b,id:"minecraft:light_blue_dye",tag:{Tags:["MCFsetting","team_b","host_inventory"]}}]}] Select05 0

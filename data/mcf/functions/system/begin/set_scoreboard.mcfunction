@@ -9,19 +9,16 @@
 
 ## Add scoreboards of gamemode
 scoreboard objectives add Phase dummy
-scoreboard objectives add PrevPhase dummy
-scoreboard objectives add Death minecraft.custom:minecraft.deaths
-scoreboard objectives add Kill dummy
-scoreboard objectives add KillTemp minecraft.custom:minecraft.player_kills
 ## Add scoreboards of time
 scoreboard objectives add Tick dummy
 scoreboard objectives add Second dummy
 scoreboard objectives add Minute dummy
+scoreboard objectives add CountTick dummy
 scoreboard objectives add RestSecond dummy
 scoreboard objectives add TotalSecond dummy
 scoreboard objectives add 60 dummy
 ## Add scoreboards for participants
-scoreboard objectives add Participant dummy
+scoreboard objectives add PlayerNumber dummy
 scoreboard objectives add NumParticipant dummy
 ## Add scoreboards for setting phase - common
 scoreboard objectives add ThrowItem dummy
@@ -90,55 +87,24 @@ scoreboard objectives add VisibleNamePrv dummy
 scoreboard objectives add VisibleInvisPrv dummy
 scoreboard objectives add VisibleDeathPrv dummy
 scoreboard objectives add SetTeamManualPrv dummy
+## Add scoreboards for landing phase
+scoreboard objectives add OnGround dummy
+## Add scoreboards for preparation phase
+scoreboard objectives add UseBanner minecraft.used:minecraft.bat_spawn_egg
 
 ## Set scoreboards for game phase
 scoreboard players set #mcf Phase 0
-scoreboard players set #mcf PrevPhase 0
-scoreboard players set @a Phase 0
-scoreboard players set @a Death 0
-scoreboard players set @a Kill 0
-scoreboard players set @a KillTemp 0
 ## Set scoreboards of time
 scoreboard players set #mcf Tick 0
 scoreboard players set #mcf Second 0
 scoreboard players set #mcf Minute 0
+scoreboard players set #mcf CountTick 0
 scoreboard players set #mcf RestSecond 0
 scoreboard players set #mcf TotalSecond 0
 scoreboard players set #mcf 60 60
 ## Set scoreboards for participants
-scoreboard players set #mcf Participant 0
+scoreboard players set #mcf PlayerNumber 0
 scoreboard players set #mcf NumParticipant 0
-scoreboard players set @a Participant 0
-scoreboard players set @a NumParticipant 0
-## Set scoreboards for setting phase - common
-scoreboard players set @a ThrowItem 0
-scoreboard players set @a Select02 0
-scoreboard players set @a Select03 0
-scoreboard players set @a Select04 0
-scoreboard players set @a Select05 0
-scoreboard players set @a Select06 0
-scoreboard players set @a Select09 0
-scoreboard players set @a Select10 0
-scoreboard players set @a Select11 0
-scoreboard players set @a Select12 0
-scoreboard players set @a Select13 0
-scoreboard players set @a Select14 0
-scoreboard players set @a Select15 0
-scoreboard players set @a Select16 0
-scoreboard players set @a Select17 0
-scoreboard players set @a Select18 0
-scoreboard players set @a Select19 0
-scoreboard players set @a Select20 0
-scoreboard players set @a Select21 0
-scoreboard players set @a Select22 0
-scoreboard players set @a Select23 0
-scoreboard players set @a Select24 0
-scoreboard players set @a Select25 0
-scoreboard players set @a Select26 0
-scoreboard players set @a Select28 0
-scoreboard players set @a Select31 0
-scoreboard players set @a Select34 0
-scoreboard players set @a Selected 0
 ## Set scoreboards for setting phase - choose preparation time
 scoreboard players set #mcf 10 10
 scoreboard players set #mcf 100 100
@@ -175,6 +141,3 @@ scoreboard players set #mcf VisibleNamePrv 0
 scoreboard players set #mcf VisibleInvisPrv 0
 scoreboard players set #mcf VisibleDeathPrv 0
 scoreboard players set #mcf SetTeamManualPrv 0
-
-## Tmp
-scoreboard objectives setdisplay sidebar Point

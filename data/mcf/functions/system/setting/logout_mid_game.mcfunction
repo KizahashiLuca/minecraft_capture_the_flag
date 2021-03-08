@@ -18,7 +18,7 @@ scoreboard players set @s KillTemp 0
 #### Set gamemode
 gamemode spectator @s
 #### Set bossbars
-bossbar set minecraft:time players @s
+bossbar set minecraft:bossbar players @s
 #### Set inventory
 clear @s
 #### Set experience

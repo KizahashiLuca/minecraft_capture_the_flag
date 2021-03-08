@@ -10,9 +10,17 @@
 ## Set preview choice
 scoreboard players operation #mcf TimeOfPreparePrv = #mcf TimeOfPrepare
 
-## Set bossbar
+## Set scoreboards
 scoreboard players operation #mcf Minute = #mcf TimeOfPrepare
-bossbar set minecraft:time name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
+scoreboard players operation #mcf RestSecond = #mcf Minute
+scoreboard players operation #mcf RestSecond *= #mcf 60
+scoreboard players operation #mcf RestSecond += #mcf Second
+scoreboard players operation #mcf TotalSecond = #mcf RestSecond
+execute store result bossbar minecraft:bossbar max run scoreboard players get #mcf TotalSecond
+execute store result bossbar minecraft:bossbar value run scoreboard players get #mcf RestSecond
+
+## Set bossbar
+bossbar set minecraft:bossbar name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
 
 ## Send messages
 function mcf:system/setting/choose_phase_of_preparation_time/send_message

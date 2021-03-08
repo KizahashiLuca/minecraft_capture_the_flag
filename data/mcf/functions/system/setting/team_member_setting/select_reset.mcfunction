@@ -9,7 +9,7 @@
 
 ## Select team member setting
 team leave @a
-tag @a[tag=Participant] add NotSetTeam
+tag @a[tag=MCF_Player] add MCF_NotSetTeam
 
 clear @a
 team join TeamA @p[tag=MCF_Host]

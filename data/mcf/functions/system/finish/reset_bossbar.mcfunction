@@ -8,4 +8,6 @@
 #############################################################
 
 ## Reset bossbars
-bossbar remove minecraft:time
+bossbar remove minecraft:bossbar
+bossbar remove minecraft:bossbar_red
+bossbar remove minecraft:bossbar_blue
