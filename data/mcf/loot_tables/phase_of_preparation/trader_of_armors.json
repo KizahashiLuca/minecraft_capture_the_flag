@@ -1,0 +1,33 @@
+{
+  "type": "generic",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:villager_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                ["",{"text":"防具商人","color":"light_purple","bold":false,"italic":false}]
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                ["",{"text":"右クリックで使用","color":"purple","bold":false,"italic":false}]
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Tags:[\"MCFitem\"],EntityTag:{VillagerData:{profession:nitwit,level:5,type:taiga},Offers:{Recipes:[{buy:{id:\"minecraft:cobblestone\",Count:5},buyB:{id:\"minecraft:coal\",Count:5},sell:{id:\"minecraft:iron_helmet\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:cobblestone\",Count:5},buyB:{id:\"minecraft:coal\",Count:5},sell:{id:\"minecraft:iron_chestplate\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:cobblestone\",Count:5},buyB:{id:\"minecraft:coal\",Count:5},sell:{id:\"minecraft:iron_leggings\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:cobblestone\",Count:5},buyB:{id:\"minecraft:coal\",Count:5},sell:{id:\"minecraft:iron_boots\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:iron_ingot\",Count:5},buyB:{id:\"minecraft:redstone\",Count:5},sell:{id:\"minecraft:diamond_helmet\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:iron_ingot\",Count:5},buyB:{id:\"minecraft:redstone\",Count:5},sell:{id:\"minecraft:diamond_chestplate\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:iron_ingot\",Count:5},buyB:{id:\"minecraft:redstone\",Count:5},sell:{id:\"minecraft:diamond_leggings\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:iron_ingot\",Count:5},buyB:{id:\"minecraft:redstone\",Count:5},sell:{id:\"minecraft:diamond_boots\",Count:1},rewardExp:1b,maxUses:9999999},{buy:{id:\"minecraft:white_wool\",Count:16},sell:{id:\"minecraft:elytra\",Count:1,tag:{Damage:402}},rewardExp:1b,maxUses:9999999}]},Marker:0b,Invulnerable:1b,NoAI:1b,DeathLootTable:\"mcf:phase_of_preparation/empty\",CustomNameVisible:0b}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
