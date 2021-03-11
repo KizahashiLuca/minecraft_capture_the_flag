@@ -72,8 +72,10 @@ scoreboard objectives remove TimeOfWarPrv
 ## Remove scoreboards for setting phase - choose gamerule
 scoreboard objectives remove WeatherCycle
 scoreboard objectives remove DaylightCycle
+scoreboard objectives remove DoNightVision
 scoreboard objectives remove WeatherCyclePrv
 scoreboard objectives remove DaylightCyclePrv
+scoreboard objectives remove DoNightVisionPrv
 ## Remove scoreboards for setting phase - choose team setting
 scoreboard objectives remove friendlyFire
 scoreboard objectives remove collisionRule
@@ -91,6 +93,9 @@ scoreboard objectives remove SetTeamManualPrv
 scoreboard objectives remove OnGround
 ## Remove scoreboards for preparation phase
 scoreboard objectives remove UseBanner
+## Remove scoreboards for war phase
+scoreboard objectives remove StolenFlag
+scoreboard objectives remove VexSpawn
 
 ## Reset objectives
 scoreboard players reset #mcf

@@ -12,3 +12,11 @@ clear @s minecraft:blue_banner{display:{Name:'{"bold":true,"italic":false,"color
 
 ## Set banner
 execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamB,limit=1] run setblock ~ ~ ~ minecraft:blue_banner{CustomName:'{"text":"青チームフラッグ","color":"blue","bold":true,"italic":false}'}
+
+## Send title messages
+title @a[team=TeamB] title [""]
+title @a[team=TeamB] subtitle ["",{"text":"青チーム","color":"blue"},{"text":"のフラッグを取り返した！","color":"white"}]
+title @a[team=TeamB] times 20 80 20
+
+## Set scoreboard
+scoreboard players set #mcf_blue StolenFlag 0

@@ -14,6 +14,9 @@ function mcf:system/phase_of_preparation/login_mid_game
 execute if entity @p[team=TeamA] if score #mcf_red Phase matches 40 run function mcf:system/phase_of_preparation/time/team_a/tick
 execute if entity @p[team=TeamB] if score #mcf_blue Phase matches 40 run function mcf:system/phase_of_preparation/time/team_b/tick
 
+## Set effect
+execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player] minecraft:night_vision 1000000 1 true
+
 ## Set banner
 execute as @a[scores={UseBanner=1..}] at @s run function mcf:system/phase_of_preparation/banner/set_banner
 execute as @e[type=minecraft:area_effect_cloud,tag=MCF_Flag] at @s unless block ~ ~ ~ #mcf:banner run function mcf:system/phase_of_preparation/banner/unset_banner
@@ -21,6 +24,10 @@ execute as @e[type=minecraft:area_effect_cloud,tag=MCF_Flag] at @s unless block 
 ## Change phase
 execute if score #mcf_red Phase matches 50 run gamemode adventure @a[team=TeamA]
 execute if score #mcf_blue Phase matches 50 run gamemode adventure @a[team=TeamB]
+
+## Set banner of phase changee
+execute if score #mcf_red Phase matches 50 unless entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA] as @a[team=TeamA,tag=MCF_Leader] at @s run function mcf:system/phase_of_preparation/banner/set_banner
+execute if score #mcf_blue Phase matches 50 unless entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamB] as @a[team=TeamB,tag=MCF_Leader] at @s run function mcf:system/phase_of_preparation/banner/set_banner
 
 ## Change phase
 execute if score #mcf_red Phase matches 50 if score #mcf_blue Phase matches 50 if entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA] if entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamB] run function mcf:system/phase_of_war/change_to

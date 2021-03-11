@@ -7,17 +7,17 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
-## Log in the mid of the game
-function mcf:system/phase_of_war/login_mid_game
+## Add scoreboard
+scoreboard objectives add DoNightVisionTmp dummy
 
-## Time system
-function mcf:system/phase_of_war/time/tick
+## Change DoNightVision
+execute if score #mcf DoNightVision matches 1 run scoreboard players set #mcf DoNightVisionTmp 0
+execute if score #mcf DoNightVision matches 0 run scoreboard players set #mcf DoNightVisionTmp 1
 
-## Set effect
-execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player] minecraft:night_vision 1000000 1 true
+scoreboard players operation #mcf DoNightVision = #mcf DoNightVisionTmp
 
-## Evoker
-execute if entity @e[type=minecraft:evoker] run function mcf:system/phase_of_war/evoker/main
+## Remove scoreboard
+scoreboard objectives remove DoNightVisionTmp
 
-## Banner system
-function mcf:system/phase_of_war/banner/main
+## Set inventory
+function mcf:system/setting/choose_gamerule/change_to

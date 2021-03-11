@@ -1,17 +1,20 @@
-#####################################
-## Minecraft Advancements Disturber
-## MC-Version: JE 1.16
-## Author    : @potage00
-## Author    : @KizahashiLuca
-## Date      : 06 Mar 2021
-## Version   : β-1.2.4
-#####################################
+#############################################################
+## Minecraft Capture the Flag                              ##
+## MC-Version: JE 1.16.5                                   ##
+## Author    : @KizahashiLuca                              ##
+## Date      : 01 Mar 2021                                 ##
+## Version   : α-0.1                                       ##
+## ©2021. This work is licensed under a CC BY 4.0 license. ##
+#############################################################
 
 ## Log in the mid of the game
 function mcf:system/phase_of_waiting/login_mid_game
 
 ## Time system
 function mcf:system/phase_of_waiting/time/tick
+
+## Set effect
+execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player] minecraft:night_vision 1000000 1 true
 
 ## Set gamerule
 execute if score #mcf Second matches 1 if score #mcf Tick matches 18 run function mcf:system/phase_of_waiting/set_gamerule

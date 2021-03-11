@@ -24,10 +24,12 @@ execute if score #mcf Difficulty matches 3 run difficulty hard
 
 ## Spawnpoint
 execute as @p[team=TeamA,tag=MCF_Leader] at @s align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Spawn","MCF_TeamA"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
+execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamA,limit=1] run spawnpoint @a[team=TeamA] ~ ~ ~
 execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamA,limit=1] run forceload add ~ ~
 
 ## Spawnpoint
 execute as @p[team=TeamB,tag=MCF_Leader] at @s align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Spawn","MCF_TeamB"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
+execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamB,limit=1] run spawnpoint @a[team=TeamB] ~ ~ ~
 execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamB,limit=1] run forceload add ~ ~
 
 ## Kill entities
@@ -40,7 +42,9 @@ effect clear @a[tag=MCF_Player]
 ## Give items
 loot give @a[tag=MCF_Player,tag=MCF_Leader] loot mcf:phase_of_preparation/banner
 loot give @a[tag=MCF_Player,tag=MCF_Leader] loot mcf:phase_of_preparation/trader_of_arms
-loot give @a[tag=MCF_Player,tag=MCF_Leader] loot mcf:phase_of_preparation/trader_of_special_items
+loot give @a[tag=MCF_Player,tag=MCF_Leader] loot mcf:phase_of_preparation/trader_of_armors
+loot give @a[tag=MCF_Player,tag=MCF_Leader,team=TeamA] loot mcf:phase_of_preparation/trader_of_special_items_team_a
+loot give @a[tag=MCF_Player,tag=MCF_Leader,team=TeamB] loot mcf:phase_of_preparation/trader_of_special_items_team_b
 
 ## Change phase
 scoreboard players set #mcf_red Phase 40

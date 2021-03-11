@@ -20,9 +20,9 @@ function mcf:system/finish/reset_player
 function mcf:system/finish/reset_bossbar
 #### Reset gamemode
 function mcf:system/finish/reset_gamemode
-#### Reset gamerules
-function mcf:system/finish/reset_gamerule
 #### Reset scoreboards
 function mcf:system/finish/reset_scoreboard
 #### Reset tags
 function mcf:system/finish/reset_tag
+#### Reset gamerules
+function mcf:system/finish/reset_gamerule

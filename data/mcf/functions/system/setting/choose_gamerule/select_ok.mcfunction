@@ -10,6 +10,7 @@
 ## Set preview choice
 scoreboard players operation #mcf WeatherCyclePrv = #mcf WeatherCycle
 scoreboard players operation #mcf DaylightCyclePrv = #mcf DaylightCycle
+scoreboard players operation #mcf DoNightVisionPrv = #mcf DoNightVision
 
 ## Send messages
 function mcf:system/setting/choose_gamerule/send_message

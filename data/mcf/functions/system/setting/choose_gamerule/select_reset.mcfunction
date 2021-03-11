@@ -10,6 +10,7 @@
 ## Reset choice
 scoreboard players set #mcf WeatherCycle 1
 scoreboard players set #mcf DaylightCycle 1
+scoreboard players set #mcf DoNightVision 0
 
 ## Send messages
 function mcf:system/setting/choose_gamerule/change_to

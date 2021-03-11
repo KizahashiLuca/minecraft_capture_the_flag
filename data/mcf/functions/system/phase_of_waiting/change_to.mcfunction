@@ -1,11 +1,14 @@
-#####################################
-## Minecraft Advancements Disturber
-## MC-Version: JE 1.16
-## Author    : @potage00
-## Author    : @KizahashiLuca
-## Date      : 06 Mar 2021
-## Version   : β-1.2.4
-#####################################
+#############################################################
+## Minecraft Capture the Flag                              ##
+## MC-Version: JE 1.16.5                                   ##
+## Author    : @KizahashiLuca                              ##
+## Date      : 01 Mar 2021                                 ##
+## Version   : α-0.1                                       ##
+## ©2021. This work is licensed under a CC BY 4.0 license. ##
+#############################################################
+
+## Play sound
+playsound minecraft:ui.button.click master @p[tag=MCF_Host] ~ ~ ~ 1 1 1
 
 ## Summon world spawn
 execute at @p[tag=MCF_Host] align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_WorldSpawn"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}

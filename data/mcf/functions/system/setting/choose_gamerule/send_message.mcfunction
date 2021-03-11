@@ -14,5 +14,8 @@ execute if score #mcf WeatherCycle matches 1 run tellraw @a ["",{"text":"[初期
 execute if score #mcf DaylightCycle matches 0 run tellraw @a ["",{"text":"[初期設定] 昼夜サイクルは ","color":"green"},{"text":"OFF","color":"green","bold":true},{"text":" に設定されました。","color":"green"}]
 execute if score #mcf DaylightCycle matches 1 run tellraw @a ["",{"text":"[初期設定] 昼夜サイクルは ","color":"green"},{"text":"ON","color":"green","bold":true},{"text":" に設定されました。","color":"green"}]
 
+execute if score #mcf DoNightVision matches 0 run tellraw @a ["",{"text":"[初期設定] 常時暗視効果は ","color":"green"},{"text":"OFF","color":"green","bold":true},{"text":" に設定されました。","color":"green"}]
+execute if score #mcf DoNightVision matches 1 run tellraw @a ["",{"text":"[初期設定] 常時暗視効果は ","color":"green"},{"text":"ON","color":"green","bold":true},{"text":" に設定されました。","color":"green"}]
+
 ## Change to choose setting
 function mcf:system/setting/choose_setting/change_to

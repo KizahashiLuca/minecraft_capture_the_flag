@@ -72,8 +72,10 @@ scoreboard objectives add TimeOfWarPrv dummy
 ## Add scoreboards for setting phase - choose gamerule
 scoreboard objectives add WeatherCycle dummy
 scoreboard objectives add DaylightCycle dummy
+scoreboard objectives add DoNightVision dummy
 scoreboard objectives add WeatherCyclePrv dummy
 scoreboard objectives add DaylightCyclePrv dummy
+scoreboard objectives add DoNightVisionPrv dummy
 ## Add scoreboards for setting phase - choose team setting
 scoreboard objectives add friendlyFire dummy
 scoreboard objectives add collisionRule dummy
@@ -91,6 +93,9 @@ scoreboard objectives add SetTeamManualPrv dummy
 scoreboard objectives add OnGround dummy
 ## Add scoreboards for preparation phase
 scoreboard objectives add UseBanner minecraft.used:minecraft.bat_spawn_egg
+## Add scoreboards for war phase
+scoreboard objectives add StolenFlag dummy
+scoreboard objectives add VexSpawn dummy
 
 ## Set scoreboards for game phase
 scoreboard players set #mcf Phase 0
@@ -126,8 +131,10 @@ scoreboard players set #mcf TimeOfWarPrv 100
 ## Set scoreboards for setting phase - choose gamerule
 scoreboard players set #mcf WeatherCycle 1
 scoreboard players set #mcf DaylightCycle 1
+scoreboard players set #mcf DoNightVision 0
 scoreboard players set #mcf WeatherCyclePrv 1
 scoreboard players set #mcf DaylightCyclePrv 1
+scoreboard players set #mcf DoNightVisionPrv 0
 ## Set scoreboards for setting phase - choose team setting
 scoreboard players set #mcf friendlyFire 1
 scoreboard players set #mcf collisionRule 1
