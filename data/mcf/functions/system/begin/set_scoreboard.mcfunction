@@ -20,6 +20,12 @@ scoreboard objectives add 60 dummy
 ## Add scoreboards for participants
 scoreboard objectives add PlayerNumber dummy
 scoreboard objectives add NumParticipant dummy
+## Add scoreboards for position
+scoreboard objectives add PosX dummy
+scoreboard objectives add PosY dummy
+scoreboard objectives add PosZ dummy
+scoreboard objectives add 45 dummy
+scoreboard objectives add Angle dummy
 ## Add scoreboards for setting phase - common
 scoreboard objectives add ThrowItem dummy
 scoreboard objectives add Select02 dummy
@@ -110,6 +116,8 @@ scoreboard players set #mcf 60 60
 ## Set scoreboards for participants
 scoreboard players set #mcf PlayerNumber 0
 scoreboard players set #mcf NumParticipant 0
+## Set scoreboards for position
+scoreboard players set #mcf 45 45
 ## Set scoreboards for setting phase - choose preparation time
 scoreboard players set #mcf 10 10
 scoreboard players set #mcf 100 100

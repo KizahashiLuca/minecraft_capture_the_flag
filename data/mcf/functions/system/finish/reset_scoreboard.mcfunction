@@ -20,6 +20,12 @@ scoreboard objectives remove 60
 ## Remove scoreboards for participants
 scoreboard objectives remove PlayerNumber
 scoreboard objectives remove NumParticipant
+## Remove scoreboards for position
+scoreboard objectives remove PosX
+scoreboard objectives remove PosY
+scoreboard objectives remove PosZ
+scoreboard objectives remove 45
+scoreboard objectives remove Angle
 ## Remove scoreboards for setting phase - common
 scoreboard objectives remove ThrowItem
 scoreboard objectives remove Select02

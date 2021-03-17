@@ -10,6 +10,9 @@
 ## Log in the mid of the game
 function mcf:system/phase_of_landing/login_mid_game
 
+## Tell position
+execute as @a run function mcf:system/common/set_position/main
+
 ## Set effect
 execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player] minecraft:night_vision 1000000 1 true
 
