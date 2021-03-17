@@ -29,8 +29,8 @@ tag @a[tag=MCF_Player] remove MCF_Numbered
 bossbar remove minecraft:bossbar
 
 ## Set scoreboards
-scoreboard players set #mcf Tick 20
-scoreboard players set #mcf Second 5
+scoreboard players set #mcf Tick 0
+scoreboard players set #mcf Second 30
 
 ## Change phase
 scoreboard players set #mcf Phase 20

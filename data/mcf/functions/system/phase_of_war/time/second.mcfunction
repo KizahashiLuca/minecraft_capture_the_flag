@@ -8,8 +8,8 @@
 #############################################################
 
 ## Calculate time every second
-scoreboard players remove #mcf Second 1
-execute if score #mcf Second matches ..-1 run scoreboard players set #mcf Second 0
+execute if score #mcf Second matches 0 run scoreboard players set #mcf Second 60
+execute if score #mcf Second matches 1.. run scoreboard players remove #mcf Second 1
 
 ## Set scoreboard
 scoreboard players operation #mcf RestSecond = #mcf Minute
@@ -28,6 +28,3 @@ execute if score #mcf Minute matches 0 if score #mcf Second matches 0 as @a at @
 
 ## Calculate time every minute
 execute if score #mcf Second matches 0 run function mcf:system/phase_of_war/time/minute
-
-## Reset tick
-execute unless score #mcf Second matches 0 run scoreboard players set #mcf Tick 20

@@ -11,6 +11,3 @@
 scoreboard players remove #mcf_red Minute 1
 execute if score #mcf_red Minute matches ..-1 run bossbar set minecraft:bossbar_red name ["",{"text":"PREPARATION TIME FINISHED","color":"dark_purple","bold":true}]
 execute if score #mcf_red Minute matches ..-1 run scoreboard players set #mcf_red Phase 50
-
-## Reset second
-execute unless score #mcf_red Minute matches ..-1 run scoreboard players set #mcf_red Second 60

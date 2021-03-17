@@ -8,8 +8,8 @@
 #############################################################
 
 ## Calculate time every tick
-scoreboard players remove #mcf_blue Tick 1
-execute if score #mcf_blue Tick matches ..-1 run scoreboard players set #mcf_blue Tick 0
+execute if score #mcf_blue Tick matches 0 run scoreboard players operation #mcf_blue Tick = #mcf_blue CountTick
+execute if score #mcf_blue Tick matches 1.. run scoreboard players remove #mcf_blue Tick 1
 
 ## Calculate time every second
 execute if score #mcf_blue Tick matches 0 run function mcf:system/phase_of_preparation/time/team_b/second

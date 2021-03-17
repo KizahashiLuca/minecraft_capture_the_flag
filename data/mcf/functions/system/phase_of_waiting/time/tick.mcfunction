@@ -7,9 +7,9 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
-## Calculate time every tick
-scoreboard players remove #mcf Tick 1
-execute if score #mcf Tick matches -1 run scoreboard players set #mcf Tick 19
-
 ## Calculate time every second
-execute if score #mcf Tick matches 0 run function mcf:system/phase_of_waiting/time/second
+execute if score #mcf Tick matches 0 run scoreboard players remove #mcf Second 1
+
+## Calculate time every tick
+execute if score #mcf Tick matches 0 run scoreboard players set #mcf Tick 20
+execute if score #mcf Tick matches 1.. run scoreboard players remove #mcf Tick 1

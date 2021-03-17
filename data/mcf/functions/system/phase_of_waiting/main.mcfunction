@@ -17,16 +17,22 @@ function mcf:system/phase_of_waiting/time/tick
 execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player] minecraft:night_vision 1000000 1 true
 
 ## Set gamerule
-execute if score #mcf Second matches 1 if score #mcf Tick matches 18 run function mcf:system/phase_of_waiting/set_gamerule
+execute if score #mcf Second matches 27 if score #mcf Tick matches 0 run function mcf:system/phase_of_waiting/set_gamerule
 ## Set player
-execute if score #mcf Second matches 1 if score #mcf Tick matches 17 run function mcf:system/phase_of_waiting/set_player
+execute if score #mcf Second matches 26 if score #mcf Tick matches 10 run function mcf:system/phase_of_waiting/set_player
 ## Set world
-execute if score #mcf Second matches 1 if score #mcf Tick matches 16 run function mcf:system/phase_of_waiting/set_world
-## Set wall
-execute if score #mcf Second matches 1 if score #mcf Tick matches 15 run function mcf:system/phase_of_waiting/set_wall
+execute if score #mcf Second matches 26 if score #mcf Tick matches 0 run function mcf:system/phase_of_waiting/set_world
 ## Set team a
-execute if score #mcf Second matches 1 if score #mcf Tick matches 2 run function mcf:system/phase_of_waiting/team_a/set_team
+execute if score #mcf Second matches 25 if score #mcf Tick matches 10 run function mcf:system/phase_of_waiting/team_a/set_team
 ## Set team b
-execute if score #mcf Second matches 1 if score #mcf Tick matches 1 run function mcf:system/phase_of_waiting/team_b/set_team
+execute if score #mcf Second matches 25 if score #mcf Tick matches 0 run function mcf:system/phase_of_waiting/team_b/set_team
+## Set wall
+execute if score #mcf Second matches 15..24 run function mcf:system/phase_of_waiting/set_wall
+## Send title message
+execute if score #mcf Second matches 0..15 if score #mcf Tick matches 0 run title @a title ["",{"score":{"name":"#mcf","objective":"Second"}}]
+execute if score #mcf Second matches 0..15 if score #mcf Tick matches 0 run title @a times 3 14 3
+## Process the sound system
+execute if score #mcf Second matches 1..3 if score #mcf Tick matches 0 as @a at @s run playsound minecraft:item.trident.throw master @s ~ ~ ~ 1 1 1
+execute if score #mcf Second matches 0 if score #mcf Tick matches 0 as @a at @s run playsound minecraft:item.trident.thunder master @s ~ ~ ~ 1 1 1
 ## Change phase
 execute if score #mcf Second matches 0 if score #mcf Tick matches 0 run function mcf:system/phase_of_landing/change_to

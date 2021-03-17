@@ -8,9 +8,9 @@
 #############################################################
 
 ## Send title messages
-title @a[team=TeamA] title [""]
-title @a[team=TeamA] subtitle ["",{"text":"赤チーム","color":"red"},{"text":"のフラッグが盗まれた！","color":"white"}]
-title @a[team=TeamA] times 20 80 20
+title @a title [""]
+title @a subtitle ["",{"text":"赤チーム","color":"red"},{"text":"のフラッグが盗まれた！","color":"white"}]
+title @a times 20 80 20
 
 ## Set scoreboard
 scoreboard players set #mcf_red StolenFlag 1

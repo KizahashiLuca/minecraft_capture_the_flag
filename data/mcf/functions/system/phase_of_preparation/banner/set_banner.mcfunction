@@ -32,10 +32,6 @@ execute as @s[team=TeamB] run setblock ~ ~ ~ minecraft:blue_banner{CustomName:'{
 execute as @s[team=TeamA] align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Flag","MCF_TeamA"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
 execute as @s[team=TeamB] align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Flag","MCF_TeamB"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
 
-## Spawnpoint
-execute as @s[team=TeamA] run spawnpoint @a[team=TeamA] ~ ~ ~
-execute as @s[team=TeamB] run spawnpoint @a[team=TeamB] ~ ~ ~
-
 ## Set forceload
 forceload add ~ ~
 

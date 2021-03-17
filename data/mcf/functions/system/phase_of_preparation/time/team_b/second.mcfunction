@@ -8,8 +8,8 @@
 #############################################################
 
 ## Calculate time every second
-scoreboard players remove #mcf_blue Second 1
-execute if score #mcf_blue Second matches ..-1 run scoreboard players set #mcf_blue Second 0
+execute if score #mcf_blue Second matches 0 run scoreboard players set #mcf_blue Second 60
+execute if score #mcf_blue Second matches 1.. run scoreboard players remove #mcf_blue Second 1
 
 ## Set scoreboard
 scoreboard players operation #mcf_blue RestSecond = #mcf_blue Minute
@@ -18,7 +18,7 @@ scoreboard players operation #mcf_blue RestSecond += #mcf_blue Second
 
 ## Store time for bossbar
 bossbar set minecraft:bossbar_blue players @a[team=TeamB]
-bossbar set minecraft:bossbar_blue name ["",{"text":"PREAPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_blue","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_blue","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
+bossbar set minecraft:bossbar_blue name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_blue","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_blue","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
 execute store result bossbar minecraft:bossbar_blue value run scoreboard players get #mcf_blue RestSecond
 
 ## Process the sound system
@@ -28,6 +28,3 @@ execute if score #mcf_blue Minute matches 0 if score #mcf_blue Second matches 0 
 
 ## Calculate time every minute
 execute if score #mcf_blue Second matches 0 run function mcf:system/phase_of_preparation/time/team_b/minute
-
-## Reset tick
-execute unless score #mcf_blue Second matches 0 run scoreboard players operation #mcf_blue Tick = #mcf_blue CountTick

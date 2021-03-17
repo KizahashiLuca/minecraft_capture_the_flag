@@ -35,7 +35,9 @@ kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:blue_banner",tag:{display:{
 
 ## Spawnpoint
 execute as @s[tag=MCF_TeamA] at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamA,limit=1] run spawnpoint @a[team=TeamA] ~ ~ ~
+execute as @s[tag=MCF_TeamA] at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamA,limit=1] run forceload add ~ ~
 execute as @s[tag=MCF_TeamB] at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamB,limit=1] run spawnpoint @a[team=TeamB] ~ ~ ~
+execute as @s[tag=MCF_TeamB] at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamB,limit=1] run forceload add ~ ~
 
 ## Unset forceload
 forceload remove ~ ~

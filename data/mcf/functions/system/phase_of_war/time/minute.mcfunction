@@ -11,6 +11,3 @@
 scoreboard players remove #mcf Minute 1
 execute if score #mcf Minute matches ..-1 run bossbar set minecraft:bossbar name ["",{"text":"WAR TIME","color":"dark_purple","bold":true}]
 execute if score #mcf Minute matches ..-1 run scoreboard players set #mcf Phase 70
-
-## Reset second
-execute unless score #mcf Minute matches ..-1 run scoreboard players set #mcf Second 60

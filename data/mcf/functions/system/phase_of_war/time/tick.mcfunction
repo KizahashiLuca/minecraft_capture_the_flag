@@ -8,8 +8,8 @@
 #############################################################
 
 ## Calculate time every tick
-scoreboard players remove #mcf Tick 1
-execute if score #mcf Tick matches ..-1 run scoreboard players set #mcf Tick 0
+execute if score #mcf Tick matches 0 run scoreboard players set #mcf Tick 20
+execute if score #mcf Tick matches 1.. run scoreboard players remove #mcf Tick 1
 
 ## Calculate time every second
 execute if score #mcf Tick matches 0 run function mcf:system/phase_of_war/time/second

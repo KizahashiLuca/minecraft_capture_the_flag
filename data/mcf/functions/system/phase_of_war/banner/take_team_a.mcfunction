@@ -14,9 +14,9 @@ clear @s minecraft:red_banner{display:{Name:'{"bold":true,"italic":false,"color"
 execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA,limit=1] run setblock ~ ~ ~ minecraft:red_banner{CustomName:'{"text":"赤チームフラッグ","color":"red","bold":true,"italic":false}'}
 
 ## Send title messages
-title @a[team=TeamA] title [""]
-title @a[team=TeamA] subtitle ["",{"text":"赤チーム","color":"red"},{"text":"のフラッグを取り返した！","color":"white"}]
-title @a[team=TeamA] times 20 80 20
+title @a title [""]
+title @a subtitle ["",{"text":"赤チーム","color":"red"},{"text":"がフラッグを取り返した！","color":"white"}]
+title @a times 20 80 20
 
 ## Set scoreboard
 scoreboard players set #mcf_red StolenFlag 0
