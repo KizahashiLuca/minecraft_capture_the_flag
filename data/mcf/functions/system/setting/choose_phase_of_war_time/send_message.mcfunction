@@ -8,7 +8,7 @@
 #############################################################
 
 ## Send time limit messages
-tellraw @a ["",{"text":"[初期設定] 追加時間は ","color":"green"},{"score":{"name":"#mcf","objective":"TimeOfWar"},"color":"green","bold":true},{"text":"分","color":"green","bold":true},{"text":" に設定されました。","color":"green"}]
+tellraw @a ["",{"text":"[初期設定] 戦争フェーズは ","color":"green"},{"score":{"name":"#mcf","objective":"TimeOfWar"},"color":"green","bold":true},{"text":"分","color":"green","bold":true},{"text":" に設定されました。","color":"green"}]
 
 ## Change to choose setting
 function mcf:system/setting/choose_setting/change_to
