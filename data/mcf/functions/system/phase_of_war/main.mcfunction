@@ -28,5 +28,8 @@ execute unless entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_T
 ## Evoker
 execute if entity @e[type=minecraft:evoker] run function mcf:system/phase_of_war/evoker/main
 
+## Grenade Launcher
+# execute if entity @e[type=minecraft:arrow,tag=MCF_Grenade] run function mcf:system/phase_of_war/grenade/main
+
 ## Banner system
 function mcf:system/phase_of_war/banner/main

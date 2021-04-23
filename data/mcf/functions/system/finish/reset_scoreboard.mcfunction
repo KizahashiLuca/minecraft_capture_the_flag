@@ -20,6 +20,7 @@ scoreboard objectives remove 60
 ## Remove scoreboards for participants
 scoreboard objectives remove PlayerNumber
 scoreboard objectives remove NumParticipant
+scoreboard objectives remove NumParticipantTp
 ## Remove scoreboards for position
 scoreboard objectives remove PosX
 scoreboard objectives remove PosY

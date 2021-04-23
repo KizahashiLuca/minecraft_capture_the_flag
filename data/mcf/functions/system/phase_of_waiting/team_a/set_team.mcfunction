@@ -16,3 +16,5 @@ function mcf:system/phase_of_waiting/team_a/set_rule
 function mcf:system/phase_of_waiting/team_a/set_scoreboard
 ## Set bossbar
 function mcf:system/phase_of_waiting/team_a/set_bossbar
+## Count player
+function mcf:system/phase_of_waiting/team_a/count_player

@@ -20,6 +20,7 @@ scoreboard objectives add 60 dummy
 ## Add scoreboards for participants
 scoreboard objectives add PlayerNumber dummy
 scoreboard objectives add NumParticipant dummy
+scoreboard objectives add NumParticipantTp dummy
 ## Add scoreboards for position
 scoreboard objectives add PosX dummy
 scoreboard objectives add PosY dummy
