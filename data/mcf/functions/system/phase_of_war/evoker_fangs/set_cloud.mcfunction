@@ -7,9 +7,9 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
-## Set scoreboards
-scoreboard players set #mcf_red CountTick 20
-scoreboard players operation #mcf_red 60 = #mcf 60
-scoreboard players operation #mcf_red Minute = #mcf Minute
-scoreboard players set #mcf_red Second 0
-scoreboard players set #mcf_red Tick 0
+## Set owner uuid
+data modify entity @s Owner set from entity @p[tag=MCF_EvokerFangs] UUID
+## Set rotation
+data modify entity @s Rotation set from entity @p[tag=MCF_EvokerFangs] Rotation
+## Set scoreboard
+scoreboard players set @s EvokerFangsCount 0

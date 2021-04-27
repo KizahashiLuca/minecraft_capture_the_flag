@@ -7,9 +7,6 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
-## Set scoreboards
-scoreboard players set #mcf_red CountTick 20
-scoreboard players operation #mcf_red 60 = #mcf 60
-scoreboard players operation #mcf_red Minute = #mcf Minute
-scoreboard players set #mcf_red Second 0
-scoreboard players set #mcf_red Tick 0
+## Set scoreboard
+execute as @s[scores={UseCarrotOnStick=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{Tags:["MCFitem","MCF_EvokerFangsWand"]}}}] run function mcf:system/phase_of_war/evoker_fangs/mainhand
+execute as @s[scores={UseCarrotOnStick=1..},nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick",Count:1b,tag:{Tags:["MCFitem","MCF_EvokerFangsWand"]}}]}] run function mcf:system/phase_of_war/evoker_fangs/offhand

@@ -29,7 +29,11 @@ execute unless entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_T
 execute if entity @e[type=minecraft:evoker] run function mcf:system/phase_of_war/evoker/main
 
 ## Grenade Launcher
-# execute if entity @e[type=minecraft:arrow,tag=MCF_Grenade] run function mcf:system/phase_of_war/grenade/main
+execute as @a[scores={UseCrossbow=1..}] at @s run function mcf:system/phase_of_war/rocket_launcher/main
+execute as @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitedRocket] at @s run function mcf:system/phase_of_war/rocket_launcher/ignite_rocket
+
+## Evoker Fangs' Wand
+execute as @a[scores={UseCarrotOnStick=1..}] at @s run function mcf:system/phase_of_war/evoker_fangs/main
 
 ## Banner system
 function mcf:system/phase_of_war/banner/main

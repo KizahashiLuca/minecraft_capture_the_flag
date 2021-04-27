@@ -38,5 +38,15 @@ execute if score #mcf_blue Phase matches 50 run gamemode adventure @a[team=TeamB
 execute if score #mcf_red Phase matches 50 unless entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA] as @a[team=TeamA,tag=MCF_Leader] at @s run function mcf:system/phase_of_preparation/banner/set_banner
 execute if score #mcf_blue Phase matches 50 unless entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamB] as @a[team=TeamB,tag=MCF_Leader] at @s run function mcf:system/phase_of_preparation/banner/set_banner
 
+## Evoker
+execute if entity @e[type=minecraft:evoker] run function mcf:system/phase_of_war/evoker/main
+
+## Grenade Launcher
+execute as @a[scores={UseCrossbow=1..}] at @s run function mcf:system/phase_of_war/rocket_launcher/main
+execute as @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitedRocket] at @s run function mcf:system/phase_of_war/rocket_launcher/ignite_rocket
+
+## Evoker Fangs' Wand
+execute as @a[scores={UseCarrotOnStick=1..}] at @s run function mcf:system/phase_of_war/evoker_fangs/main
+
 ## Change phase
 execute if score #mcf_red Phase matches 50 if score #mcf_blue Phase matches 50 if entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA] if entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamB] run function mcf:system/phase_of_war/change_to

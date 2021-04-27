@@ -1,0 +1,21 @@
+{
+  "type": "generic",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Damage:0,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

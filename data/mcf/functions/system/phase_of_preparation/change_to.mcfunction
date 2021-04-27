@@ -46,6 +46,9 @@ loot give @a[tag=MCF_Player,tag=MCF_Leader] loot mcf:phase_of_preparation/trader
 loot give @a[tag=MCF_Player,tag=MCF_Leader,team=TeamA] loot mcf:phase_of_preparation/trader_of_special_items_team_a
 loot give @a[tag=MCF_Player,tag=MCF_Leader,team=TeamB] loot mcf:phase_of_preparation/trader_of_special_items_team_b
 
+## Set scoreboards
+scoreboard players set @a[tag=MCF_Player] UseCrossbow 0
+
 ## Change phase
 scoreboard players set #mcf_red Phase 40
 scoreboard players set #mcf_blue Phase 40

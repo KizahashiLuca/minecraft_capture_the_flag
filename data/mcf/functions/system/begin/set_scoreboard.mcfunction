@@ -61,10 +61,10 @@ scoreboard objectives add 10 dummy
 scoreboard objectives add 100 dummy
 scoreboard objectives add 1000 dummy
 scoreboard objectives add 10000 dummy
-scoreboard objectives add digit_0001 dummy
-scoreboard objectives add digit_0010 dummy
-scoreboard objectives add digit_0100 dummy
-scoreboard objectives add digit_1000 dummy
+scoreboard objectives add Digit0001 dummy
+scoreboard objectives add Digit0010 dummy
+scoreboard objectives add Digit0100 dummy
+scoreboard objectives add Digit1000 dummy
 scoreboard objectives add TimeOfPrepare dummy
 scoreboard objectives add TimeOfPreparePrv dummy
 ## Add scoreboards for setting phase - choose area
@@ -103,6 +103,23 @@ scoreboard objectives add UseBanner minecraft.used:minecraft.bat_spawn_egg
 ## Add scoreboards for war phase
 scoreboard objectives add StolenFlag dummy
 scoreboard objectives add VexSpawn dummy
+## Add scoreboards for war phase - evoker fangs
+scoreboard objectives add EvokerFangsCount dummy
+scoreboard objectives add DamageOfWand dummy
+scoreboard objectives add UseCarrotOnStick minecraft.used:minecraft.carrot_on_a_stick
+## Add scoreboards for war phase - grenade launcher
+scoreboard objectives add RocketUUID0 dummy
+scoreboard objectives add RocketUUID1 dummy
+scoreboard objectives add RocketUUID2 dummy
+scoreboard objectives add RocketUUID3 dummy
+scoreboard objectives add PlayerUUID0 dummy
+scoreboard objectives add PlayerUUID1 dummy
+scoreboard objectives add PlayerUUID2 dummy
+scoreboard objectives add PlayerUUID3 dummy
+scoreboard objectives add NotExplosive dummy
+scoreboard objectives add RocketLifeTime dummy
+scoreboard objectives add RocketLife dummy
+scoreboard objectives add UseCrossbow minecraft.used:minecraft.crossbow
 
 ## Set scoreboards for game phase
 scoreboard players set #mcf Phase 0

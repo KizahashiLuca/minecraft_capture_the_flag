@@ -20,6 +20,8 @@ execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player]
 execute if score #mcf Second matches 27 if score #mcf Tick matches 0 run function mcf:system/phase_of_waiting/set_gamerule
 ## Set player
 execute if score #mcf Second matches 26 if score #mcf Tick matches 10 run function mcf:system/phase_of_waiting/set_player
+## Set scoreboard
+execute if score #mcf Second matches 26 if score #mcf Tick matches 5 as @a[tag=MCF_Player] run function mcf:system/phase_of_waiting/set_uuid
 ## Set world
 execute if score #mcf Second matches 26 if score #mcf Tick matches 0 run function mcf:system/phase_of_waiting/set_world
 ## Set team a

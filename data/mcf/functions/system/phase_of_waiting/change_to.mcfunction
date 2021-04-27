@@ -29,6 +29,7 @@ tag @a[tag=MCF_Player] remove MCF_Numbered
 bossbar remove minecraft:bossbar
 
 ## Set scoreboards
+scoreboard players set @a[tag=MCF_Player] UseCrossbow 0
 scoreboard players set #mcf Tick 0
 scoreboard players set #mcf Second 30
 

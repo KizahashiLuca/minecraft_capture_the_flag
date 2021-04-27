@@ -61,10 +61,10 @@ scoreboard objectives remove 10
 scoreboard objectives remove 100
 scoreboard objectives remove 1000
 scoreboard objectives remove 10000
-scoreboard objectives remove digit_0001
-scoreboard objectives remove digit_0010
-scoreboard objectives remove digit_0100
-scoreboard objectives remove digit_1000
+scoreboard objectives remove Digit0001
+scoreboard objectives remove Digit0010
+scoreboard objectives remove Digit0100
+scoreboard objectives remove Digit1000
 scoreboard objectives remove TimeOfPrepare
 scoreboard objectives remove TimeOfPreparePrv
 ## Remove scoreboards for setting phase - choose area
@@ -103,6 +103,23 @@ scoreboard objectives remove UseBanner
 ## Remove scoreboards for war phase
 scoreboard objectives remove StolenFlag
 scoreboard objectives remove VexSpawn
+## Remove scoreboards for war phase - evoker fangs
+scoreboard objectives remove EvokerFangsCount
+scoreboard objectives remove DamageOfWand
+scoreboard objectives remove UseCarrotOnStick
+## Remove scoreboards for war phase - grenade launcher
+scoreboard objectives remove RocketUUID0
+scoreboard objectives remove RocketUUID1
+scoreboard objectives remove RocketUUID2
+scoreboard objectives remove RocketUUID3
+scoreboard objectives remove PlayerUUID0
+scoreboard objectives remove PlayerUUID1
+scoreboard objectives remove PlayerUUID2
+scoreboard objectives remove PlayerUUID3
+scoreboard objectives remove NotExplosive
+scoreboard objectives remove RocketLifeTime
+scoreboard objectives remove RocketLife
+scoreboard objectives remove UseCrossbow
 
 ## Reset objectives
 scoreboard players reset #mcf

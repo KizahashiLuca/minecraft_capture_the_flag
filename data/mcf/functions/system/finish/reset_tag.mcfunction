@@ -11,7 +11,11 @@
 tag @a remove MCF_Host
 tag @a remove MCF_Player
 
+tag @a remove MCF_TeamA
+tag @a remove MCF_TeamB
 tag @a remove MCF_Numbered
 tag @a remove MCF_Leader
 tag @a remove MCF_Teleporter
 tag @a remove MCF_NotSetTeam
+tag @a remove MCF_RocketLauncher
+tag @a remove MCF_EvokerFangs

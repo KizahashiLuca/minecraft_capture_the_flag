@@ -7,6 +7,9 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
+## Calculate time every minute
+execute if score #mcf_red Second matches 0 run function mcf:system/phase_of_preparation/time/team_a/minute
+
 ## Calculate time every second
 execute if score #mcf_red Second matches 0 run scoreboard players set #mcf_red Second 60
 execute if score #mcf_red Second matches 1.. run scoreboard players remove #mcf_red Second 1
@@ -44,6 +47,3 @@ execute if score #mcf_red NumParticipantTp matches ..100 run scoreboard players 
 execute if score #mcf_red Minute matches 0 if score #mcf_red Second matches 4..10 as @a[team=TeamA] at @s run playsound minecraft:item.trident.return master @s ~ ~ ~ 1 1 1
 execute if score #mcf_red Minute matches 0 if score #mcf_red Second matches 1..3 as @a[team=TeamA] at @s run playsound minecraft:item.trident.throw master @s ~ ~ ~ 1 1 1
 execute if score #mcf_red Minute matches 0 if score #mcf_red Second matches 0 as @a[team=TeamA] at @s run playsound minecraft:item.trident.thunder master @s ~ ~ ~ 1 1 1
-
-## Calculate time every minute
-execute if score #mcf_red Second matches 0 run function mcf:system/phase_of_preparation/time/team_a/minute

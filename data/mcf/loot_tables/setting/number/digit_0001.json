@@ -11,7 +11,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 0
+                "Digit0001": 0
               },
               "entity": "this"
             }
@@ -24,7 +24,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 1
+                "Digit0001": 1
               },
               "entity": "this"
             }
@@ -37,7 +37,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 2
+                "Digit0001": 2
               },
               "entity": "this"
             }
@@ -50,7 +50,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 3
+                "Digit0001": 3
               },
               "entity": "this"
             }
@@ -63,7 +63,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 4
+                "Digit0001": 4
               },
               "entity": "this"
             }
@@ -76,7 +76,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 5
+                "Digit0001": 5
               },
               "entity": "this"
             }
@@ -89,7 +89,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 6
+                "Digit0001": 6
               },
               "entity": "this"
             }
@@ -102,7 +102,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 7
+                "Digit0001": 7
               },
               "entity": "this"
             }
@@ -115,7 +115,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 8
+                "Digit0001": 8
               },
               "entity": "this"
             }
@@ -128,7 +128,7 @@
             {
               "condition": "minecraft:entity_scores",
               "scores": {
-                "digit_0001": 9
+                "Digit0001": 9
               },
               "entity": "this"
             }

@@ -7,9 +7,8 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
-## Set scoreboards
-scoreboard players set #mcf_red CountTick 20
-scoreboard players operation #mcf_red 60 = #mcf 60
-scoreboard players operation #mcf_red Minute = #mcf Minute
-scoreboard players set #mcf_red Second 0
-scoreboard players set #mcf_red Tick 0
+## Set scoreboard
+execute store result score @s PlayerUUID0 run data get entity @s UUID[0]
+execute store result score @s PlayerUUID1 run data get entity @s UUID[1]
+execute store result score @s PlayerUUID2 run data get entity @s UUID[2]
+execute store result score @s PlayerUUID3 run data get entity @s UUID[3]

@@ -39,6 +39,8 @@ scoreboard players operation #mcf Minute = #mcf TimeOfWar
 scoreboard players set #mcf_red StolenFlag 0
 scoreboard players set #mcf_blue StolenFlag 0
 
+scoreboard players set @a[tag=MCF_Player] UseCrossbow 0
+
 ## Change phase
 scoreboard players reset #mcf_red Phase
 scoreboard players reset #mcf_blue Phase

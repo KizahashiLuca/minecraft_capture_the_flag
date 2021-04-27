@@ -11,4 +11,5 @@
 scoreboard players set #mcf_blue CountTick 20
 scoreboard players operation #mcf_blue 60 = #mcf 60
 scoreboard players operation #mcf_blue Minute = #mcf Minute
-scoreboard players operation #mcf_blue Second = #mcf Second
+scoreboard players set #mcf_blue Second 0
+scoreboard players set #mcf_blue Tick 0

@@ -1,0 +1,488 @@
+{
+  "type": "generic",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                      "equipment": {
+                        "offhand": {
+                          "item": "minecraft:carrot_on_a_stick",
+                          "nbt": "{Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:0,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:0,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:1,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:1,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:2,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:2,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:3,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:3,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:4,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:4,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:5,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:5,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:6,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:6,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:7,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:7,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:8,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:8,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:9,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:9,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:10,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:10,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:11,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:11,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:12,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:12,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:13,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:13,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:14,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:14,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:15,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:15,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:16,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:16,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:17,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:17,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:18,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:18,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:19,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:19,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:20,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:20,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:21,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:21,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:22,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:22,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:23,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:23,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:24,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "equipment": {
+                      "offhand": {
+                        "item": "minecraft:carrot_on_a_stick",
+                        "nbt": "{Damage:24,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+                      }
+                    }
+                  }
+                }
+              ],
+              "tag": "{Damage:25,Tags:[\"MCFitem\",\"MCF_EvokerFangsWand\"],display:{Name:'[\"\",{\"text\":\"エヴォーカーの牙の杖\",\"color\":\"aqua\",\"italic\":false}]'}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
