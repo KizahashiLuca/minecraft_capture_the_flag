@@ -117,8 +117,6 @@ scoreboard objectives remove PlayerUUID1
 scoreboard objectives remove PlayerUUID2
 scoreboard objectives remove PlayerUUID3
 scoreboard objectives remove NotExplosive
-scoreboard objectives remove RocketLifeTime
-scoreboard objectives remove RocketLife
 scoreboard objectives remove UseCrossbow
 
 ## Reset objectives

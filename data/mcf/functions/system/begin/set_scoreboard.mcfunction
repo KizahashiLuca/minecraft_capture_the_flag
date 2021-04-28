@@ -117,8 +117,6 @@ scoreboard objectives add PlayerUUID1 dummy
 scoreboard objectives add PlayerUUID2 dummy
 scoreboard objectives add PlayerUUID3 dummy
 scoreboard objectives add NotExplosive dummy
-scoreboard objectives add RocketLifeTime dummy
-scoreboard objectives add RocketLife dummy
 scoreboard objectives add UseCrossbow minecraft.used:minecraft.crossbow
 
 ## Set scoreboards for game phase
