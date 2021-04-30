@@ -11,7 +11,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'[\"\",{\"text\":\"ミサイルランチャー\",\"color\":\"aqua\",\"italic\":false}]'},ChargedProjectiles:[{id:\"minecraft:firework_rocket\",Count:1b,tag:{display:{Name:'[\"\",{\"text\":\"ホーミングミサイル\",\"color\":\"aqua\",\"italic\":false}]'}}}],Damage:0,Unbreakable:1b,Charged:1b,Tags:[\"MCFitem\",\"MCF_MisileLauncher\"]}"
+              "tag": "{display:{Name:'[\"\",{\"text\":\"ロケットランチャー\",\"color\":\"aqua\",\"italic\":false}]'},ChargedProjectiles:[{id:\"minecraft:firework_rocket\",Count:1b,tag:{display:{Name:'[\"\",{\"text\":\"ロケット弾\",\"color\":\"aqua\",\"italic\":false}]'}}}],Damage:0,Unbreakable:1b,Charged:1b,Tags:[\"MCFitem\",\"MCF_RocketLauncher\"]}"
             }
           ]
         }

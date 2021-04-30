@@ -7,19 +7,8 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
-## Reset tags 
-tag @a remove MCF_Host
-tag @a remove MCF_Player
-
-tag @a remove MCF_TeamA
-tag @a remove MCF_TeamB
-tag @a remove MCF_Numbered
-tag @a remove MCF_Leader
-tag @a remove MCF_Teleporter
-tag @a remove MCF_NotSetTeam
-tag @a remove MCF_RocketLauncher
-tag @a remove MCF_MisileLauncher
-tag @a remove MCF_DetectLockon
-tag @a remove MCF_LockonTarget
-tag @s remove MCF_TrackTarget
-tag @a remove MCF_EvokerFangs
+## Set square root
+scoreboard players operation @s SqrtVarX += @s SqrtVarI
+scoreboard players add @s SqrtXYZ 1
+scoreboard players add @s SqrtVarI 2
+execute if score @s NormXYZ > @s SqrtVarX run function mcf:system/phase_of_war/launcher/misile_launcher/square_root

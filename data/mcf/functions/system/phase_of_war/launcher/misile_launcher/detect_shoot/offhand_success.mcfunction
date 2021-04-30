@@ -14,14 +14,14 @@ replaceitem entity @s weapon.offhand minecraft:air
 playsound entity.item.break player @a ~ ~ ~ 1.0 1.0
 
 ## Add a tag
-tag @s add MCF_RocketLauncher
+tag @s add MCF_MisileLauncher
 
 ## Detect firework_rocket
-execute as @e[type=minecraft:firework_rocket,tag=!MCF_IgnitedRocket] run function mcf:system/phase_of_war/launcher/rocket_launcher/detect_rocket
-execute as @e[type=minecraft:firework_rocket,tag=MCF_IgnitingRocket] run function mcf:system/phase_of_war/launcher/rocket_launcher/igniting_rocket
+execute as @e[type=minecraft:firework_rocket,tag=!MCF_IgnitedMisile] run function mcf:system/phase_of_war/launcher/misile_launcher/detect_shoot/detect_misile
+execute as @e[type=minecraft:firework_rocket,tag=MCF_IgnitingMisile] run function mcf:system/phase_of_war/launcher/misile_launcher/detect_shoot/igniting_misile
+
+## Set scoreboard
+function mcf:system/phase_of_war/launcher/misile_launcher/find_target/reset_target
 
 ## Remove a tag
-tag @s remove MCF_RocketLauncher
-
-## Reset scoreboard
-scoreboard players set @s UseCrossbow 0
+tag @s remove MCF_MisileLauncher

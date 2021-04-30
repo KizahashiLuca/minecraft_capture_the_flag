@@ -107,17 +107,39 @@ scoreboard objectives add VexSpawn dummy
 scoreboard objectives add EvokerFangsCount dummy
 scoreboard objectives add DamageOfWand dummy
 scoreboard objectives add UseCarrotOnStick minecraft.used:minecraft.carrot_on_a_stick
-## Add scoreboards for war phase - grenade launcher
-scoreboard objectives add RocketUUID0 dummy
-scoreboard objectives add RocketUUID1 dummy
-scoreboard objectives add RocketUUID2 dummy
-scoreboard objectives add RocketUUID3 dummy
+## Add scoreboards for war phase - launcher common
 scoreboard objectives add PlayerUUID0 dummy
 scoreboard objectives add PlayerUUID1 dummy
 scoreboard objectives add PlayerUUID2 dummy
 scoreboard objectives add PlayerUUID3 dummy
 scoreboard objectives add NotExplosive dummy
 scoreboard objectives add UseCrossbow minecraft.used:minecraft.crossbow
+## Add scoreboards for war phase - rocket launcher
+scoreboard objectives add RocketUUID0 dummy
+scoreboard objectives add RocketUUID1 dummy
+scoreboard objectives add RocketUUID2 dummy
+scoreboard objectives add RocketUUID3 dummy
+## Add scoreboards for war phase - misile launcher
+scoreboard objectives add MisileUUID0 dummy
+scoreboard objectives add MisileUUID1 dummy
+scoreboard objectives add MisileUUID2 dummy
+scoreboard objectives add MisileUUID3 dummy
+scoreboard objectives add TargetUUID0 dummy
+scoreboard objectives add TargetUUID1 dummy
+scoreboard objectives add TargetUUID2 dummy
+scoreboard objectives add TargetUUID3 dummy
+scoreboard objectives add TargetReset dummy
+scoreboard objectives add DiffX dummy
+scoreboard objectives add DiffY dummy
+scoreboard objectives add DiffZ dummy
+scoreboard objectives add PowDiffX dummy
+scoreboard objectives add PowDiffY dummy
+scoreboard objectives add PowDiffZ dummy
+scoreboard objectives add NormXYZ dummy
+scoreboard objectives add SqrtXYZ dummy
+scoreboard objectives add SqrtVarI dummy
+scoreboard objectives add SqrtVarX dummy
+scoreboard objectives add SneakTime minecraft.custom:minecraft.sneak_time
 
 ## Set scoreboards for game phase
 scoreboard players set #mcf Phase 0

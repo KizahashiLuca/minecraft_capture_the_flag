@@ -9,10 +9,10 @@
 
 ## Summon cloud
 summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["MCF_IgnitingRocket"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] RocketUUID0 = @s RocketUUID0
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] RocketUUID1 = @s RocketUUID1
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] RocketUUID2 = @s RocketUUID2
-scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] RocketUUID3 = @s RocketUUID3
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] RocketUUID0 = @e[tag=MCF_DetectRocketExplode,limit=1] RocketUUID0
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] RocketUUID1 = @e[tag=MCF_DetectRocketExplode,limit=1] RocketUUID1
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] RocketUUID2 = @e[tag=MCF_DetectRocketExplode,limit=1] RocketUUID2
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] RocketUUID3 = @e[tag=MCF_DetectRocketExplode,limit=1] RocketUUID3
 
 ## Add a tag
 tag @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingRocket,limit=1] add MCF_IgnitedRocket

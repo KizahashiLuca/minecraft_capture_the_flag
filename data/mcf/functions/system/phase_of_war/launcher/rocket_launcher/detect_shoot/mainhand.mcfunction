@@ -17,11 +17,8 @@ playsound entity.item.break player @a ~ ~ ~ 1.0 1.0
 tag @s add MCF_RocketLauncher
 
 ## Detect firework_rocket
-execute as @e[type=minecraft:firework_rocket,tag=!MCF_IgnitedRocket] run function mcf:system/phase_of_war/launcher/rocket_launcher/detect_rocket
-execute as @e[type=minecraft:firework_rocket,tag=MCF_IgnitingRocket] run function mcf:system/phase_of_war/launcher/rocket_launcher/igniting_rocket
+execute as @e[type=minecraft:firework_rocket,tag=!MCF_IgnitedRocket] run function mcf:system/phase_of_war/launcher/rocket_launcher/detect_shoot/detect_rocket
+execute as @e[type=minecraft:firework_rocket,tag=MCF_IgnitingRocket] run function mcf:system/phase_of_war/launcher/rocket_launcher/detect_shoot/igniting_rocket
 
 ## Remove a tag
 tag @s remove MCF_RocketLauncher
-
-## Reset scoreboard
-scoreboard players set @s UseCrossbow 0

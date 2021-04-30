@@ -107,17 +107,39 @@ scoreboard objectives remove VexSpawn
 scoreboard objectives remove EvokerFangsCount
 scoreboard objectives remove DamageOfWand
 scoreboard objectives remove UseCarrotOnStick
-## Remove scoreboards for war phase - grenade launcher
-scoreboard objectives remove RocketUUID0
-scoreboard objectives remove RocketUUID1
-scoreboard objectives remove RocketUUID2
-scoreboard objectives remove RocketUUID3
+## Remove scoreboards for war phase - launcher common
 scoreboard objectives remove PlayerUUID0
 scoreboard objectives remove PlayerUUID1
 scoreboard objectives remove PlayerUUID2
 scoreboard objectives remove PlayerUUID3
 scoreboard objectives remove NotExplosive
 scoreboard objectives remove UseCrossbow
+## Remove scoreboards for war phase - rocket launcher
+scoreboard objectives remove RocketUUID0
+scoreboard objectives remove RocketUUID1
+scoreboard objectives remove RocketUUID2
+scoreboard objectives remove RocketUUID3
+## Remove scoreboards for war phase - misile launcher
+scoreboard objectives remove MisileUUID0
+scoreboard objectives remove MisileUUID1
+scoreboard objectives remove MisileUUID2
+scoreboard objectives remove MisileUUID3
+scoreboard objectives remove TargetUUID0
+scoreboard objectives remove TargetUUID1
+scoreboard objectives remove TargetUUID2
+scoreboard objectives remove TargetUUID3
+scoreboard objectives remove TargetReset
+scoreboard objectives remove DiffX
+scoreboard objectives remove DiffY
+scoreboard objectives remove DiffZ
+scoreboard objectives remove PowDiffX
+scoreboard objectives remove PowDiffY
+scoreboard objectives remove PowDiffZ
+scoreboard objectives remove NormXYZ
+scoreboard objectives remove SqrtXYZ
+scoreboard objectives remove SqrtVarI
+scoreboard objectives remove SqrtVarX
+scoreboard objectives remove SneakTime
 
 ## Reset objectives
 scoreboard players reset #mcf

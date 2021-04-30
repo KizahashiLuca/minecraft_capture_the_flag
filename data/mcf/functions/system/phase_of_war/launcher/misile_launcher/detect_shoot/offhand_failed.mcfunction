@@ -8,20 +8,22 @@
 #############################################################
 
 ## Replace item
-replaceitem entity @s weapon.offhand minecraft:air
+loot replace entity @s weapon.offhand loot mcf:phase_of_preparation/items/misile_launcher
 
 ## Play sound
-playsound entity.item.break player @a ~ ~ ~ 1.0 1.0
+playsound entity.armor_stand.break player @a ~ ~ ~ 1.0 1.0
 
 ## Add a tag
 tag @s add MCF_MisileLauncher
 
 ## Detect firework_rocket
-execute as @e[type=minecraft:firework_rocket,tag=!MCF_IgnitedMisile] run function mcf:system/phase_of_war/launcher/misile_launcher/detect_misile
-execute as @e[type=minecraft:firework_rocket,tag=MCF_IgnitingMisile] run function mcf:system/phase_of_war/launcher/misile_launcher/igniting_misile
+execute as @e[type=minecraft:firework_rocket,tag=!MCF_IgnitedMisile] run function mcf:system/phase_of_war/launcher/misile_launcher/detect_shoot/detect_misile
+
+## Kill firework_rocket
+kill @e[type=minecraft:firework_rocket,tag=MCF_IgnitingMisile]
+
+## Set scoreboard
+function mcf:system/phase_of_war/launcher/misile_launcher/find_target/reset_target
 
 ## Remove a tag
 tag @s remove MCF_MisileLauncher
-
-## Reset scoreboard
-scoreboard players set @s UseCrossbow 0

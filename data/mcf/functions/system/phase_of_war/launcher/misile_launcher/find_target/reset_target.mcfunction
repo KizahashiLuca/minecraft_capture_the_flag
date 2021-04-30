@@ -7,19 +7,9 @@
 ## ©2021. This work is licensed under a CC BY 4.0 license. ##
 #############################################################
 
-## Reset tags 
-tag @a remove MCF_Host
-tag @a remove MCF_Player
-
-tag @a remove MCF_TeamA
-tag @a remove MCF_TeamB
-tag @a remove MCF_Numbered
-tag @a remove MCF_Leader
-tag @a remove MCF_Teleporter
-tag @a remove MCF_NotSetTeam
-tag @a remove MCF_RocketLauncher
-tag @a remove MCF_MisileLauncher
-tag @a remove MCF_DetectLockon
-tag @a remove MCF_LockonTarget
-tag @s remove MCF_TrackTarget
-tag @a remove MCF_EvokerFangs
+## Set scoreboard
+scoreboard players reset @s TargetUUID0
+scoreboard players reset @s TargetUUID1
+scoreboard players reset @s TargetUUID2
+scoreboard players reset @s TargetUUID3
+scoreboard players set @s TargetReset 1
