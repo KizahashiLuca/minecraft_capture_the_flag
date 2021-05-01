@@ -46,10 +46,14 @@ execute as @a[scores={UseCrossbow=1..}] at @s run function mcf:system/phase_of_w
 #### Rocket Launcher
 execute as @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitedRocket] at @s run function mcf:system/phase_of_war/launcher/rocket_launcher/main
 #### Misile Launcher
+execute as @a[nbt={Inventory:[{id:"minecraft:crossbow",Count:1b,tag:{Unbreakable:1b,Charged:1b,Tags:["MCFitem","MCF_MisileLauncher"]}}]}] at @s run function mcf:system/phase_of_war/launcher/misile_launcher/find_target/main
 execute as @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitedMisile] at @s run function mcf:system/phase_of_war/launcher/misile_launcher/main
 
 ## Evoker Fangs' Wand
 execute as @a[scores={UseCarrotOnStick=1..}] at @s run function mcf:system/phase_of_war/evoker_fangs/main
+
+## Set scoreboard
+scoreboard players set @a SneakTime 0
 
 ## Change phase
 execute if score #mcf_red Phase matches 50 if score #mcf_blue Phase matches 50 if entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA] if entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamB] run function mcf:system/phase_of_war/change_to

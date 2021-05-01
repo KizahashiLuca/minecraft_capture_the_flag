@@ -199,3 +199,5 @@ scoreboard players set #mcf VisibleNamePrv 0
 scoreboard players set #mcf VisibleInvisPrv 0
 scoreboard players set #mcf VisibleDeathPrv 0
 scoreboard players set #mcf SetTeamManualPrv 0
+## Add scoreboards for war phase - launcher common
+execute as @a run function mcf:system/begin/set_uuid
