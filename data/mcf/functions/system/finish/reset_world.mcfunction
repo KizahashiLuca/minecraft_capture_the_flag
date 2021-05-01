@@ -20,6 +20,7 @@ kill @e[type=minecraft:item]
 kill @e[type=minecraft:arrow]
 kill @e[type=minecraft:shulker]
 kill @e[type=minecraft:spectral_arrow]
+kill @e[type=minecraft:firework_rocket]
 kill @e[type=minecraft:area_effect_cloud]
 kill @e[type=minecraft:armor_stand,tag=MCF_items]
 execute as @e[type=!minecraft:player] if data entity @s Owner run kill @s

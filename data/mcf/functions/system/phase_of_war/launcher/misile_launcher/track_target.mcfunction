@@ -42,6 +42,6 @@ scoreboard players operation @s DiffX /= @s SqrtXYZ
 scoreboard players operation @s DiffY /= @s SqrtXYZ
 scoreboard players operation @s DiffZ /= @s SqrtXYZ
 
-execute store result entity @s Motion[0] double 0.002 run scoreboard players get @s DiffX
-execute store result entity @s Motion[1] double 0.002 run scoreboard players get @s DiffY
-execute store result entity @s Motion[2] double 0.002 run scoreboard players get @s DiffZ
+execute store result entity @s Motion[0] double 0.0016 run scoreboard players get @s DiffX
+execute store result entity @s Motion[1] double 0.0016 run scoreboard players get @s DiffY
+execute store result entity @s Motion[2] double 0.0016 run scoreboard players get @s DiffZ

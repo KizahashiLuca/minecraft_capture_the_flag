@@ -16,6 +16,10 @@ data modify entity @s LifeTime set value 1000
 
 ## Summon cloud
 summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["MCF_IgnitingMisile"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] PlayerUUID0 = @s PlayerUUID0
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] PlayerUUID1 = @s PlayerUUID1
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] PlayerUUID2 = @s PlayerUUID2
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] PlayerUUID3 = @s PlayerUUID3
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] MisileUUID0 = @s MisileUUID0
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] MisileUUID1 = @s MisileUUID1
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] MisileUUID2 = @s MisileUUID2

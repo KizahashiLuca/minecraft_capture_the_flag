@@ -128,7 +128,12 @@ scoreboard objectives remove TargetUUID0
 scoreboard objectives remove TargetUUID1
 scoreboard objectives remove TargetUUID2
 scoreboard objectives remove TargetUUID3
+scoreboard objectives remove PrvTargetUUID0
+scoreboard objectives remove PrvTargetUUID1
+scoreboard objectives remove PrvTargetUUID2
+scoreboard objectives remove PrvTargetUUID3
 scoreboard objectives remove TargetReset
+scoreboard objectives remove TargetChanged
 scoreboard objectives remove DiffX
 scoreboard objectives remove DiffY
 scoreboard objectives remove DiffZ
@@ -145,4 +150,4 @@ scoreboard objectives remove SneakTime
 scoreboard players reset #mcf
 scoreboard players reset #mcf_red
 scoreboard players reset #mcf_blue
-scoreboard players reset @a
+scoreboard players reset @e

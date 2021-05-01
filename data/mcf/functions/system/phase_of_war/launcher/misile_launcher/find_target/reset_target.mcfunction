@@ -8,8 +8,12 @@
 #############################################################
 
 ## Set scoreboard
-scoreboard players reset @s TargetUUID0
-scoreboard players reset @s TargetUUID1
-scoreboard players reset @s TargetUUID2
-scoreboard players reset @s TargetUUID3
+scoreboard players set @s TargetUUID0 1
+scoreboard players set @s TargetUUID1 1
+scoreboard players set @s TargetUUID2 1
+scoreboard players set @s TargetUUID3 1
+scoreboard players set @s PrvTargetUUID0 0
+scoreboard players set @s PrvTargetUUID1 0
+scoreboard players set @s PrvTargetUUID2 0
+scoreboard players set @s PrvTargetUUID3 0
 scoreboard players set @s TargetReset 1

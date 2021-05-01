@@ -9,10 +9,18 @@
 
 ## Summon cloud
 summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["MCF_IgnitingMisile"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] PlayerUUID0 = @e[tag=MCF_Misile,limit=1] PlayerUUID0
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] PlayerUUID1 = @e[tag=MCF_Misile,limit=1] PlayerUUID1
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] PlayerUUID2 = @e[tag=MCF_Misile,limit=1] PlayerUUID2
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] PlayerUUID3 = @e[tag=MCF_Misile,limit=1] PlayerUUID3
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] MisileUUID0 = @e[tag=MCF_Misile,limit=1] MisileUUID0
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] MisileUUID1 = @e[tag=MCF_Misile,limit=1] MisileUUID1
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] MisileUUID2 = @e[tag=MCF_Misile,limit=1] MisileUUID2
 scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] MisileUUID3 = @e[tag=MCF_Misile,limit=1] MisileUUID3
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] TargetUUID0 = @e[tag=MCF_Misile,limit=1] TargetUUID0
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] TargetUUID1 = @e[tag=MCF_Misile,limit=1] TargetUUID1
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] TargetUUID2 = @e[tag=MCF_Misile,limit=1] TargetUUID2
+scoreboard players operation @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] TargetUUID3 = @e[tag=MCF_Misile,limit=1] TargetUUID3
 
 ## Add a tag
 tag @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitingMisile,limit=1] add MCF_IgnitedMisile

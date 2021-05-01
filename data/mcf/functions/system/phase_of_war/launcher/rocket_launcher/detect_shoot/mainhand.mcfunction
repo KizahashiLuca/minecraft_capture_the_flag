@@ -14,11 +14,11 @@ replaceitem entity @s weapon.mainhand minecraft:air
 playsound entity.item.break player @a ~ ~ ~ 1.0 1.0
 
 ## Add a tag
-tag @s add MCF_RocketLauncher
+tag @s add MCF_RocketShooter
 
 ## Detect firework_rocket
 execute as @e[type=minecraft:firework_rocket,tag=!MCF_IgnitedRocket] run function mcf:system/phase_of_war/launcher/rocket_launcher/detect_shoot/detect_rocket
 execute as @e[type=minecraft:firework_rocket,tag=MCF_IgnitingRocket] run function mcf:system/phase_of_war/launcher/rocket_launcher/detect_shoot/igniting_rocket
 
 ## Remove a tag
-tag @s remove MCF_RocketLauncher
+tag @s remove MCF_RocketShooter

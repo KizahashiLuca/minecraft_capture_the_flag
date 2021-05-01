@@ -25,14 +25,18 @@ execute if entity @e[type=minecraft:firework_rocket,tag=MCF_Misile] run scoreboa
 execute as @e[type=minecraft:firework_rocket,tag=MCF_Misile] at @s unless block ^ ^ ^-1 #mcf:air run scoreboard players set @e[tag=MCF_MisileCloud,limit=1] NotExplosive 0
 execute as @e[type=minecraft:firework_rocket,tag=MCF_Misile] at @s unless block ^ ^ ^1 #mcf:air run scoreboard players set @e[tag=MCF_MisileCloud,limit=1] NotExplosive 0
 
+## If target player is near by, it will explode
+execute as @e[type=minecraft:firework_rocket,tag=MCF_Misile] at @s if entity @e[tag=MCF_MisileTarget,sort=nearest,distance=..1.5] run scoreboard players set @e[tag=MCF_MisileCloud,limit=1] NotExplosive 0
+
 ## If shot player is near by, it will not explode
-execute as @a[distance=..2] if score @e[tag=MCF_Misile,limit=1] PlayerUUID0 = @s PlayerUUID0 if score @e[tag=MCF_Misile,limit=1] PlayerUUID1 = @s PlayerUUID1 if score @e[tag=MCF_Misile,limit=1] PlayerUUID2 = @s PlayerUUID2 if score @e[tag=MCF_Misile,limit=1] PlayerUUID3 = @s PlayerUUID3 run scoreboard players set @e[tag=MCF_MisileCloud,limit=1] NotExplosive 1
+execute as @a if score @e[tag=MCF_MisileCloud,limit=1] PlayerUUID0 = @s PlayerUUID0 if score @e[tag=MCF_MisileCloud,limit=1] PlayerUUID1 = @s PlayerUUID1 if score @e[tag=MCF_MisileCloud,limit=1] PlayerUUID2 = @s PlayerUUID2 if score @e[tag=MCF_MisileCloud,limit=1] PlayerUUID3 = @s PlayerUUID3 run tag @s add MCF_MisileShooter
+execute as @p[tag=MCF_MisileShooter,distance=..2] run scoreboard players set @e[tag=MCF_MisileCloud,limit=1] NotExplosive 1
+
+## Explode
+execute as @e[tag=MCF_MisileCloud,scores={NotExplosive=0},limit=1] at @s run function mcf:system/phase_of_war/launcher/misile_launcher/explode
 
 ## Kill firework rocket
 execute as @e[tag=MCF_MisileCloud,scores={NotExplosive=0},limit=1] run kill @e[tag=MCF_Misile]
-
-## Explode
-execute as @e[tag=MCF_MisileCloud,scores={NotExplosive=0},limit=1] at @s run summon minecraft:creeper ~ ~ ~ {ignited:1,Fuse:0}
 
 ## Teleport cloud
 execute as @e[tag=MCF_MisileCloud,scores={NotExplosive=1},limit=1] at @e[tag=MCF_Misile,limit=1] run function mcf:system/phase_of_war/launcher/misile_launcher/teleport_cloud
@@ -42,3 +46,5 @@ kill @e[type=minecraft:area_effect_cloud,tag=MCF_MisileCloud]
 
 ## Remove a tag
 tag @e[tag=MCF_Misile] remove MCF_Misile
+tag @e[tag=MCF_MisileTarget] remove MCF_MisileTarget
+tag @e[tag=MCF_MisileShooter] remove MCF_MisileShooter

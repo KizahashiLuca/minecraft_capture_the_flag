@@ -14,7 +14,7 @@ loot replace entity @s weapon.offhand loot mcf:phase_of_preparation/items/misile
 playsound entity.armor_stand.break player @a ~ ~ ~ 1.0 1.0
 
 ## Add a tag
-tag @s add MCF_MisileLauncher
+tag @s add MCF_MisileShooter
 
 ## Detect firework_rocket
 execute as @e[type=minecraft:firework_rocket,tag=!MCF_IgnitedMisile] run function mcf:system/phase_of_war/launcher/misile_launcher/detect_shoot/detect_misile
@@ -26,4 +26,4 @@ kill @e[type=minecraft:firework_rocket,tag=MCF_IgnitingMisile]
 function mcf:system/phase_of_war/launcher/misile_launcher/find_target/reset_target
 
 ## Remove a tag
-tag @s remove MCF_MisileLauncher
+tag @s remove MCF_MisileShooter

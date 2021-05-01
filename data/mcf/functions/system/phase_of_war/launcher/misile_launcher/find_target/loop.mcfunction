@@ -8,17 +8,15 @@
 #############################################################
 
 ## Distance limit
-# execute unless block ~ ~ ~ #mcf:air run title @a actionbar ["",{"text":"Not air"}]
 execute unless block ~ ~ ~ #mcf:air run particle minecraft:dust 0.071 0.808 0.071 3 ~ ~ ~ 0 0 0 0 0 force @p[tag=MCF_DetectLockon]
 execute unless block ~ ~ ~ #mcf:air run kill @e[type=minecraft:area_effect_cloud,tag=MCF_DetectLockon]
 
 ## Distance limit
-# execute unless entity @p[tag=MCF_DetectLockon,distance=..50] run title @a actionbar ["",{"text":"Distance more than 50m"}]
 execute unless entity @p[tag=MCF_DetectLockon,distance=..50] run particle minecraft:dust 0.071 0.808 0.071 3 ~ ~ ~ 0 0 0 0 0 force @p[tag=MCF_DetectLockon]
 execute unless entity @p[tag=MCF_DetectLockon,distance=..50] run kill @e[type=minecraft:area_effect_cloud,tag=MCF_DetectLockon]
 
 ## Find target
-execute if entity @p[tag=MCF_DetectLockon,distance=3..] if entity @e[type=!#mcf:not_mob,distance=..3    ] run function mcf:system/phase_of_war/launcher/misile_launcher/find_target/found
+execute if entity @p[tag=MCF_DetectLockon,distance=3..] if entity @e[type=!#mcf:not_mob,distance=..1.5,sort=nearest] as @p[tag=MCF_DetectLockon] run function mcf:system/phase_of_war/launcher/misile_launcher/find_target/found
 
 ## Add a tag
 tag @s add MCF_NotFoundTarget

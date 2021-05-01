@@ -128,7 +128,12 @@ scoreboard objectives add TargetUUID0 dummy
 scoreboard objectives add TargetUUID1 dummy
 scoreboard objectives add TargetUUID2 dummy
 scoreboard objectives add TargetUUID3 dummy
+scoreboard objectives add PrvTargetUUID0 dummy
+scoreboard objectives add PrvTargetUUID1 dummy
+scoreboard objectives add PrvTargetUUID2 dummy
+scoreboard objectives add PrvTargetUUID3 dummy
 scoreboard objectives add TargetReset dummy
+scoreboard objectives add TargetChanged dummy
 scoreboard objectives add DiffX dummy
 scoreboard objectives add DiffY dummy
 scoreboard objectives add DiffZ dummy

@@ -13,4 +13,4 @@ execute store result score @s PlayerUUID1 run data get entity @s Owner[1]
 execute store result score @s PlayerUUID2 run data get entity @s Owner[2]
 execute store result score @s PlayerUUID3 run data get entity @s Owner[3]
 
-execute if score @p[tag=MCF_RocketLauncher] PlayerUUID0 = @s PlayerUUID0 if score @p[tag=MCF_RocketLauncher] PlayerUUID1 = @s PlayerUUID1 if score @p[tag=MCF_RocketLauncher] PlayerUUID2 = @s PlayerUUID2 if score @p[tag=MCF_RocketLauncher] PlayerUUID3 = @s PlayerUUID3 run tag @s add MCF_IgnitingRocket
+execute if score @p[tag=MCF_RocketShooter] PlayerUUID0 = @s PlayerUUID0 if score @p[tag=MCF_RocketShooter] PlayerUUID1 = @s PlayerUUID1 if score @p[tag=MCF_RocketShooter] PlayerUUID2 = @s PlayerUUID2 if score @p[tag=MCF_RocketShooter] PlayerUUID3 = @s PlayerUUID3 run tag @s add MCF_IgnitingRocket

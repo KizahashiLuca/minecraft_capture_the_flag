@@ -29,6 +29,9 @@ execute as @e[tag=MCF_DetectRocket,scores={NotExplosive=0},limit=1] run kill @e[
 
 ## Explode
 execute as @e[tag=MCF_DetectRocket,scores={NotExplosive=0},limit=1] at @s run summon minecraft:tnt ~ ~ ~
+execute as @e[tag=MCF_DetectRocket,scores={NotExplosive=0},limit=1] at @s run summon minecraft:tnt ~ ~ ~
+execute as @e[tag=MCF_DetectRocket,scores={NotExplosive=0},limit=1] at @s run summon minecraft:tnt ~ ~ ~
+execute as @e[tag=MCF_DetectRocket,scores={NotExplosive=0},limit=1] at @s run summon minecraft:tnt ~ ~ ~
 
 ## Teleport cloud
 execute as @e[tag=MCF_DetectRocket,scores={NotExplosive=1},limit=1] at @e[tag=MCF_DetectRocketExplode,limit=1] run function mcf:system/phase_of_war/launcher/rocket_launcher/teleport_cloud

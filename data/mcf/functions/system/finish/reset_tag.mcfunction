@@ -17,8 +17,8 @@ tag @a remove MCF_Numbered
 tag @a remove MCF_Leader
 tag @a remove MCF_Teleporter
 tag @a remove MCF_NotSetTeam
-tag @a remove MCF_RocketLauncher
-tag @a remove MCF_MisileLauncher
+tag @a remove MCF_RocketShooter
+tag @a remove MCF_MisileShooter
 tag @a remove MCF_DetectLockon
 tag @a remove MCF_LockonTarget
 tag @s remove MCF_TrackTarget

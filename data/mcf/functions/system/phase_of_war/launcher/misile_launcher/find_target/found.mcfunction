@@ -8,21 +8,32 @@
 #############################################################
 
 ## Find target
-tag @e[type=!#mcf:not_mob,distance=..3,sort=nearest,limit=1] add MCF_LockonTarget
+tag @e[type=!#mcf:not_mob,distance=..1.5,sort=nearest,limit=1] add MCF_LockonTarget
 
-## Set scoreboard
+## Set target uuid
 execute as @e[tag=MCF_LockonTarget,limit=1] store result score @s PlayerUUID0 run data get entity @s UUID[0]
 execute as @e[tag=MCF_LockonTarget,limit=1] store result score @s PlayerUUID1 run data get entity @s UUID[1]
 execute as @e[tag=MCF_LockonTarget,limit=1] store result score @s PlayerUUID2 run data get entity @s UUID[2]
 execute as @e[tag=MCF_LockonTarget,limit=1] store result score @s PlayerUUID3 run data get entity @s UUID[3]
-scoreboard players operation @p[tag=MCF_DetectLockon] TargetUUID0 = @e[tag=MCF_LockonTarget,limit=1] PlayerUUID0
-scoreboard players operation @p[tag=MCF_DetectLockon] TargetUUID1 = @e[tag=MCF_LockonTarget,limit=1] PlayerUUID1
-scoreboard players operation @p[tag=MCF_DetectLockon] TargetUUID2 = @e[tag=MCF_LockonTarget,limit=1] PlayerUUID2
-scoreboard players operation @p[tag=MCF_DetectLockon] TargetUUID3 = @e[tag=MCF_LockonTarget,limit=1] PlayerUUID3
-scoreboard players set @p[tag=MCF_DetectLockon] TargetReset 0
+
+scoreboard players set @s TargetReset 0
+scoreboard players set @s TargetChanged 1
+scoreboard players operation @s TargetUUID0 = @e[tag=MCF_LockonTarget,limit=1] PlayerUUID0
+scoreboard players operation @s TargetUUID1 = @e[tag=MCF_LockonTarget,limit=1] PlayerUUID1
+scoreboard players operation @s TargetUUID2 = @e[tag=MCF_LockonTarget,limit=1] PlayerUUID2
+scoreboard players operation @s TargetUUID3 = @e[tag=MCF_LockonTarget,limit=1] PlayerUUID3
+execute if score @s TargetUUID0 = @s PrvTargetUUID0 if score @s TargetUUID1 = @s PrvTargetUUID1 if score @s TargetUUID2 = @s PrvTargetUUID2 if score @s TargetUUID3 = @s PrvTargetUUID3 run scoreboard players set @s TargetChanged 0
+scoreboard players operation @s PrvTargetUUID0 = @s TargetUUID0
+scoreboard players operation @s PrvTargetUUID1 = @s TargetUUID1
+scoreboard players operation @s PrvTargetUUID2 = @s TargetUUID2
+scoreboard players operation @s PrvTargetUUID3 = @s TargetUUID3
+
+## Send message
+title @s[scores={TargetChanged=1}] title [""]
+title @s[scores={TargetChanged=1}] subtitle ["",{"text":"[目標] ","color":"red","italic":false},{"selector":"@e[tag=MCF_LockonTarget,limit=1]"},{"text":" を捕捉。","color":"red","italic":false}]
 
 ## Particle
-execute if entity @e[type=minecraft:area_effect_cloud,tag=MCF_DetectLockon] run particle minecraft:dust 1 0 0 3 ~ ~ ~ 0 0 0 0 0 force @p[tag=MCF_DetectLockon]
+execute if entity @e[type=minecraft:area_effect_cloud,tag=MCF_DetectLockon] run particle minecraft:dust 1 0 0 3 ~ ~ ~ 0 0 0 0 0 force @s
 
 ## Remove a tag
 tag @e[tag=MCF_LockonTarget] remove MCF_LockonTarget
