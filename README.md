@@ -1,13 +1,12 @@
 # Minecraft Capture the Flag
 
 ## Caution!!
- - 実況でご利用の際は以下項目の記載をお願い致します。
-   - 企画制作 : きざはしるか
+ - ご利用の際は以下項目の記載をお願い致します。
+   - 制作 : きざはしるか
      - Twitter : [https://twitter.com/KizahashiLuca](https://twitter.com/KizahashiLuca)
    - 配布元URL : [https://github.com/KizahashiLuca/minecraft_capture_the_flag](https://github.com/KizahashiLuca/minecraft_capture_the_flag)
  - 良識の範囲内で、ルールとマナーを守って遊びましょう。
  - 配布に関して問題があれば削除いたします。ご了承ください。
- - 再配布は禁止です。
 
 ## ルール
 
