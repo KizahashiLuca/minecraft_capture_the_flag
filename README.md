@@ -24,4 +24,7 @@
  - 企画制作著作 : きざはしるか [@KizahashiLuca](https://twitter.com/KizahashiLuca)
 
 
-©2021. This work is licensed under a CC BY 4.0 license. 
+## License
+(C) 2021 KizahashiLuca.
+
+This work is licensed under a [CC BY-SA 4.0 License](./LICENSE).
