@@ -1,0 +1,38 @@
+[
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "type": "minecraft:area_effect_cloud",
+            "nbt": "{Tags:[\"MCF_Flag\"]}"
+        }
+    },
+    {
+        "condition": "minecraft:alternative",
+        "terms": [
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "dimension": "minecraft:overworld"
+                    }
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "position": {
+                            "y": {
+                                "min": 60,
+                                "max": 120
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]
