@@ -41,7 +41,7 @@ execute if score #mcf_blue NumParticipantTp matches ..100 run scoreboard players
 
 ## Store time for bossbar
 bossbar set minecraft:bossbar_blue players @a[team=TeamB]
-bossbar set minecraft:bossbar_blue name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_blue","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_blue","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
+execute if score #mcf_blue Minute matches 0.. run bossbar set minecraft:bossbar_blue name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_blue","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_blue","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
 execute store result bossbar minecraft:bossbar_blue value run scoreboard players get #mcf_blue RestSecond
 
 ## Process the sound system

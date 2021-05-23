@@ -22,7 +22,7 @@ scoreboard players operation #mcf_red RestSecond += #mcf_red Second
 
 ## Store time for bossbar
 bossbar set minecraft:bossbar_red players @a[team=TeamA]
-bossbar set minecraft:bossbar_red name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_red","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_red","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
+execute if score #mcf_red Minute matches 0.. run bossbar set minecraft:bossbar_red name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_red","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_red","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
 execute store result bossbar minecraft:bossbar_red value run scoreboard players get #mcf_red RestSecond
 
 ## Calculate number of player
