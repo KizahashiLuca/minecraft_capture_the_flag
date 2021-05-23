@@ -22,8 +22,9 @@ execute as @a run function mcf:system/common/set_position/main
 execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player] minecraft:night_vision 1000000 1 true
 
 ## Set banner
-execute as @a[scores={UseBanner=1..}] at @s run function mcf:system/phase_of_preparation/banner/set_banner
-execute as @e[type=minecraft:area_effect_cloud,tag=MCF_Flag] at @s unless block ~ ~ ~ #mcf:banner run function mcf:system/phase_of_preparation/banner/unset_banner
+execute as @e[predicate=mcf:phase_of_preparation/banner/banner_user] at @s run function mcf:system/phase_of_preparation/banner/set_banner
+execute as @e[predicate=mcf:phase_of_preparation/banner/flag_restrict] at @s run function mcf:system/phase_of_preparation/banner/unset_banner
+execute as @e[predicate=mcf:phase_of_preparation/banner/unset_flag] at @s run function mcf:system/phase_of_preparation/banner/unset_banner
 
 ## Set spawnpoint
 execute as @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA] at @s run spawnpoint @a[team=TeamA] ~ ~ ~
