@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:gunpowder"
+        },
+        {
+            "tag": "mcf:sand"
+        }
+    ],
+    "result": {
+        "item": "minecraft:tnt"
+    }
+}

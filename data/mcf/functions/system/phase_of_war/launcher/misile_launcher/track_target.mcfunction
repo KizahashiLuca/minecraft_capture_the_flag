@@ -46,3 +46,6 @@ scoreboard players operation @s DiffZ /= @s SqrtXYZ
 execute store result entity @s Motion[0] double 0.0016 run scoreboard players get @s DiffX
 execute store result entity @s Motion[1] double 0.0016 run scoreboard players get @s DiffY
 execute store result entity @s Motion[2] double 0.0016 run scoreboard players get @s DiffZ
+
+## Particle
+particle minecraft:dust 0.141 0.125 0.125 1 ~ ~ ~ ~ ~ ~ 1 0 normal @a
