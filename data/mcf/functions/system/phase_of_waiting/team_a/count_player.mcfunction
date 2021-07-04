@@ -10,7 +10,7 @@
 
 ## Count players
 scoreboard players add #mcf_red NumParticipant 0
-execute as @a[tag=MCF_Player,team=TeamA] run scoreboard players add #mcf_red NumParticipant 1
+execute as @a[predicate=mcf:common/player/team_a] run scoreboard players add #mcf_red NumParticipant 1
 
 ## Test
-execute if entity @p[tag=MCF_test] run scoreboard players set #mcf_red NumParticipant 5
+execute if entity @p[tag=MCFtest] run scoreboard players set #mcf_red NumParticipant 5

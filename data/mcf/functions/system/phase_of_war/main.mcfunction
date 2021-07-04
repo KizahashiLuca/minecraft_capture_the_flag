@@ -8,23 +8,16 @@
 ## This work is licensed under a CC BY-SA 4.0 license.     ##
 #############################################################
 
-## Log in the mid of the game
-function mcf:system/phase_of_war/login_mid_game
-
 ## Time system
 function mcf:system/phase_of_war/time/tick
 
-## Tell position
-execute as @a run function mcf:system/common/set_position/main
+## Set spawnpoint team a
+execute if entity @e[predicate=mcf:common/banner/team_a] at @e[predicate=mcf:common/banner/team_a] run spawnpoint @a[predicate=mcf:common/player/team_a] ~ ~ ~
+execute unless entity @e[predicate=mcf:common/banner/team_a] at @e[predicate=mcf:common/spawnpoint/team_a] run spawnpoint @a[predicate=mcf:common/player/team_a] ~ ~ ~
 
-## Set effect
-execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player] minecraft:night_vision 1000000 1 true
-
-## Set spawnpoint
-execute as @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA] at @s run spawnpoint @a[team=TeamA] ~ ~ ~
-execute as @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamB] at @s run spawnpoint @a[team=TeamB] ~ ~ ~
-execute unless entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamA] at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamA,limit=1] run spawnpoint @a[team=TeamA] ~ ~ ~
-execute unless entity @e[type=minecraft:area_effect_cloud,tag=MCF_Flag,tag=MCF_TeamB] at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamB,limit=1] run spawnpoint @a[team=TeamB] ~ ~ ~
+## Set spawnpoint team b
+execute if entity @e[predicate=mcf:common/banner/team_b] at @e[predicate=mcf:common/banner/team_b] run spawnpoint @a[predicate=mcf:common/player/team_b] ~ ~ ~
+execute unless entity @e[predicate=mcf:common/banner/team_b] at @e[predicate=mcf:common/spawnpoint/team_b] run spawnpoint @a[predicate=mcf:common/player/team_b] ~ ~ ~
 
 ## Evoker
 execute if entity @e[type=minecraft:evoker] run function mcf:system/phase_of_war/evoker/main
@@ -39,6 +32,13 @@ execute as @e[type=minecraft:area_effect_cloud,tag=MCF_IgnitedMisile] at @s run 
 
 ## Evoker Fangs' Wand
 execute as @a[scores={UseCarrotOnStick=1..}] at @s run function mcf:system/phase_of_war/evoker_fangs/main
+
+## Bell
+scoreboard players add @e[predicate=mcf:phase_of_preparation/bell/bell] BellTick 1
+execute as @e[predicate=mcf:phase_of_preparation/bell/set_bell] at @s run function mcf:system/phase_of_preparation/bell/set_bell
+execute as @e[predicate=mcf:phase_of_preparation/bell/unset_bell] at @s run function mcf:system/phase_of_preparation/bell/unset_bell
+execute as @e[predicate=mcf:phase_of_preparation/bell/bell_alarm,tag=MCF_TeamA] at @s if entity @p[team=TeamB,distance=..50] run function mcf:system/phase_of_preparation/bell/bell_alarm_team_a
+execute as @e[predicate=mcf:phase_of_preparation/bell/bell_alarm,tag=MCF_TeamB] at @s if entity @p[team=TeamA,distance=..50] run function mcf:system/phase_of_preparation/bell/bell_alarm_team_b
 
 ## Set scoreboard
 scoreboard players set @a SneakTime 0

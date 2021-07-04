@@ -1,0 +1,30 @@
+[
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "type": "minecraft:area_effect_cloud",
+            "nbt": "{Tags:[\"MCF_Bell\"]}"
+        }
+    },
+    {
+        "condition": "minecraft:location_check",
+        "predicate": {
+            "block": {
+                "blocks": [
+                    "minecraft:bell"
+                ]
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+            "BellTick": {
+                "min": 100,
+                "max": 2147483647
+            }
+        }
+    }
+]

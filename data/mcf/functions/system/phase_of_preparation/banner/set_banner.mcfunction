@@ -11,11 +11,16 @@
 ## Set scoreboard
 scoreboard players reset @s UseBanner
 
+## Kill bat
+data modify entity @e[predicate=mcf:phase_of_preparation/banner/banner_bat,sort=nearest,limit=1] CustomNameVisible set value 0b
+effect give @e[predicate=mcf:phase_of_preparation/banner/banner_bat,sort=nearest,limit=1] minecraft:invisibility 100000 1 true
+kill @e[predicate=mcf:phase_of_preparation/banner/banner_bat,sort=nearest,limit=1]
+
 ## Save area
 setblock ~ ~ ~ minecraft:structure_block{mode:"SAVE",powered:0b,posX:-2,posY:-1,posZ:-2,sizeX:5,sizeY:3,sizeZ:5,showboundingbox:1b,showair:1b}
 
-execute as @s[team=TeamA] run data merge block ~ ~ ~ {name:"mcf:save_banner_team_a"}
-execute as @s[team=TeamB] run data merge block ~ ~ ~ {name:"mcf:save_banner_team_b"}
+execute as @s[predicate=mcf:common/player/team_a] run data merge block ~ ~ ~ {name:"mcf:save_banner_team_a"}
+execute as @s[predicate=mcf:common/player/team_b] run data merge block ~ ~ ~ {name:"mcf:save_banner_team_b"}
 
 ## Set redstone block
 setblock ~ ~1 ~ minecraft:redstone_block
@@ -26,17 +31,12 @@ fill ~ ~-1 ~-2 ~ ~-1 ~2 minecraft:bedrock
 fill ~-2 ~-1 ~ ~2 ~-1 ~ minecraft:bedrock
 fill ~-2 ~0 ~-2 ~2 ~1 ~2 minecraft:air
 setblock ~ ~ ~ minecraft:barrier
-execute as @s[team=TeamA] run setblock ~ ~ ~ minecraft:red_banner{CustomName:'{"text":"赤チームフラッグ","color":"red","bold":true,"italic":false}'}
-execute as @s[team=TeamB] run setblock ~ ~ ~ minecraft:blue_banner{CustomName:'{"text":"青チームフラッグ","color":"blue","bold":true,"italic":false}'}
+execute as @s[predicate=mcf:common/player/team_a] run setblock ~ ~ ~ minecraft:red_banner{CustomName:'{"text":"赤チームフラッグ","color":"red","bold":true,"italic":false}'}
+execute as @s[predicate=mcf:common/player/team_b] run setblock ~ ~ ~ minecraft:blue_banner{CustomName:'{"text":"青チームフラッグ","color":"blue","bold":true,"italic":false}'}
 
 ## Summon cloud
-execute as @s[team=TeamA] align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Flag","MCF_TeamA"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
-execute as @s[team=TeamB] align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Flag","MCF_TeamB"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
+execute as @s[predicate=mcf:common/player/team_a] align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Flag","MCF_TeamA"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
+execute as @s[predicate=mcf:common/player/team_b] align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Flag","MCF_TeamB"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
 
 ## Set forceload
 forceload add ~ ~
-
-## Kill bat
-data modify entity @e[type=minecraft:bat,nbt={CustomName:'{"extra":[{"bold":false,"italic":false,"color":"red","text":"フラッグ設置用アイテム"}],"text":""}'},sort=nearest,limit=1] CustomNameVisible set value 0b
-effect give @e[type=minecraft:bat,nbt={CustomName:'{"extra":[{"bold":false,"italic":false,"color":"light_purple","text":"フラッグ設置用アイテム"}],"text":""}'},sort=nearest,limit=1] minecraft:invisibility 100000 1 true
-kill @e[type=minecraft:bat,nbt={CustomName:'{"extra":[{"bold":false,"italic":false,"color":"light_purple","text":"フラッグ設置用アイテム"}],"text":""}'},sort=nearest,limit=1]

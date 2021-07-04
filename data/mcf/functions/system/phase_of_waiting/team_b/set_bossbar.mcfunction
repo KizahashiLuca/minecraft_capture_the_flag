@@ -10,7 +10,7 @@
 
 ## Set bossbars
 bossbar add minecraft:bossbar_blue ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_blue","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_blue","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
-bossbar set minecraft:bossbar_blue players @a[team=TeamB]
+bossbar set minecraft:bossbar_blue players @a[predicate=mcf:common/player/team_b]
 bossbar set minecraft:bossbar_blue name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_blue","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_blue","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
 
 ## Set scoreboards

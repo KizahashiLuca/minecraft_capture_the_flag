@@ -8,10 +8,8 @@
 ## This work is licensed under a CC BY-SA 4.0 license.     ##
 #############################################################
 
-## Log in the mid of the game
-#### Set tags
-tag @a[tag=MCF_Player,team=!TeamA,team=!TeamB] remove MCF_Player
-#### Set gamemode
-gamemode spectator @a[team=!TeamA,team=!TeamB,gamemode=!spectator]
-#### Set effect
-effect give @a[tag=!MCF_Player] minecraft:night_vision 1000000 1 true
+## Bell sound
+playsound block.bell.use ambient @a[team=TeamA] ~ ~ ~ 0.3 1.0
+
+## Scoreboard
+scoreboard players set @s BellTick 0

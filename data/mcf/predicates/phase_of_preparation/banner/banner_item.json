@@ -1,0 +1,21 @@
+{
+    "condition": "minecraft:alternative",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "minecraft:item",
+                "nbt": "{Item:{id:\"minecraft:red_banner\",tag:{display:{Name:'{\"bold\":true,\"italic\":false,\"color\":\"red\",\"text\":\"赤チームフラッグ\"}'}}}}"
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "minecraft:item",
+                "nbt": "{Item:{id:\"minecraft:blue_banner\",tag:{display:{Name:'{\"bold\":true,\"italic\":false,\"color\":\"blue\",\"text\":\"青チームフラッグ\"}'}}}}"
+            }
+        }
+    ]
+}

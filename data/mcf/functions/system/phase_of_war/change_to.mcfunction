@@ -21,7 +21,6 @@ tellraw @a ["",{"text":"   ・フラッグのチェスト保管禁止","color":"
 function mcf:system/common/message_end
 
 ## Set player
-clear @a minecraft:bat_spawn_egg{Tags:["MCFitem"]}
 gamemode survival @a[tag=MCF_Player]
 ## Set gamerule
 function mcf:system/phase_of_war/set_gamerule
@@ -30,7 +29,7 @@ function mcf:system/phase_of_war/set_bossbar
 ## Set world
 function mcf:system/phase_of_war/set_world
 ## Set wall
-function mcf:system/phase_of_war/set_wall
+execute at @e[predicate=mcf:common/spawnpoint/world_spawn] run function mcf:system/phase_of_war/set_wall
 
 ## Set scoreboards
 scoreboard players set #mcf Tick 20

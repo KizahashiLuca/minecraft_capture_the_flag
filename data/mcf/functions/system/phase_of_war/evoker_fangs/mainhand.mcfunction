@@ -12,7 +12,7 @@
 execute store result score @s DamageOfWand run data get entity @s SelectedItem.tag.Damage 1.0
 
 ## Replace item
-replaceitem entity @s[scores={DamageOfWand=25..}] weapon.mainhand minecraft:air
+loot replace entity @s[scores={DamageOfWand=25..}] weapon.mainhand loot mcf:phase_of_preparation/air
 loot replace entity @s[scores={DamageOfWand=0..24}] weapon.mainhand loot mcf:phase_of_preparation/items/carrot_on_a_stick_mainhand
 
 ## Play sound

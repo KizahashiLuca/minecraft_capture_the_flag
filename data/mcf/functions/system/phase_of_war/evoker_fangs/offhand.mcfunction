@@ -12,7 +12,7 @@
 execute store result score @s DamageOfWand run data get entity @s Inventory[{Slot:-106b}].tag.Damage 1.0
 
 ## Replace item
-replaceitem entity @s[scores={DamageOfWand=25..}] weapon.offhand minecraft:air
+loot replace entity @s[scores={DamageOfWand=25..}] weapon.offhand loot mcf:phase_of_preparation/air
 loot replace entity @s[scores={DamageOfWand=0..24}] weapon.offhand loot mcf:phase_of_preparation/items/carrot_on_a_stick_offhand
 
 ## Play sound

@@ -146,6 +146,8 @@ scoreboard objectives add SqrtXYZ dummy
 scoreboard objectives add SqrtVarI dummy
 scoreboard objectives add SqrtVarX dummy
 scoreboard objectives add SneakTime minecraft.custom:minecraft.sneak_time
+## Add scoreboards for war phase - bell
+scoreboard objectives add BellTick dummy
 
 ## Set scoreboards for game phase
 scoreboard players set #mcf Phase 0

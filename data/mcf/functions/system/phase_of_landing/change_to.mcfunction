@@ -21,9 +21,9 @@ function mcf:system/common/message_end
 scoreboard players set @a OnGround 0
 
 ## Teleport
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_WorldSpawn,limit=1] run function mcf:system/phase_of_landing/random_teleport_team_a
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_WorldSpawn,limit=1] run function mcf:system/phase_of_landing/random_teleport_team_b
-execute as @a[tag=MCF_Player] at @s run tp @s ~ 160 ~
+execute at @e[predicate=mcf:common/spawnpoint/world_spawn] run function mcf:system/phase_of_landing/random_teleport_team_a
+execute at @e[predicate=mcf:common/spawnpoint/world_spawn] run function mcf:system/phase_of_landing/random_teleport_team_b
+execute as @a[predicate=mcf:common/player] at @s run tp @s ~ 160 ~
 
 ## Change phase
 scoreboard players set #mcf Phase 30

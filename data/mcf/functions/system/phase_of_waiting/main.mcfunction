@@ -8,14 +8,8 @@
 ## This work is licensed under a CC BY-SA 4.0 license.     ##
 #############################################################
 
-## Log in the mid of the game
-function mcf:system/phase_of_waiting/login_mid_game
-
 ## Time system
 function mcf:system/phase_of_waiting/time/tick
-
-## Set effect
-execute if score #mcf DoNightVision matches 1 run effect give @a[tag=MCF_Player] minecraft:night_vision 1000000 1 true
 
 ## Set gamerule
 execute if score #mcf Second matches 27 if score #mcf Tick matches 0 run function mcf:system/phase_of_waiting/set_gamerule
@@ -28,7 +22,7 @@ execute if score #mcf Second matches 25 if score #mcf Tick matches 10 run functi
 ## Set team b
 execute if score #mcf Second matches 25 if score #mcf Tick matches 0 run function mcf:system/phase_of_waiting/team_b/set_team
 ## Set wall
-execute if score #mcf Second matches 15..24 run function mcf:system/phase_of_waiting/set_wall
+execute if score #mcf Second matches 15..24 at @e[predicate=mcf:common/spawnpoint/world_spawn] run function mcf:system/phase_of_waiting/set_wall
 ## Send title message
 execute if score #mcf Second matches 0..15 if score #mcf Tick matches 0 run title @a title ["",{"score":{"name":"#mcf","objective":"Second"}}]
 execute if score #mcf Second matches 0..15 if score #mcf Tick matches 0 run title @a times 3 14 3

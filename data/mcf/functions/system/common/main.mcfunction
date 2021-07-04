@@ -8,10 +8,16 @@
 ## This work is licensed under a CC BY-SA 4.0 license.     ##
 #############################################################
 
+## Set effect
+execute if score #mcf DoNightVision matches 1 run effect give @a[predicate=mcf:common/player] minecraft:night_vision 1000000 1 true
+
 ## Log in the mid of the game
-#### Set tags
-tag @a[tag=MCF_Player,team=!TeamA,team=!TeamB] remove MCF_Player
+#### Remove a tag
+tag @a[predicate=mcf:common/player/not_team] remove MCF_Player
 #### Set gamemode
-gamemode spectator @a[team=!TeamA,team=!TeamB,gamemode=!spectator]
+gamemode spectator @a[predicate=mcf:common/player/not_spectate]
 #### Set effect
-effect give @a[tag=!MCF_Player] minecraft:night_vision 1000000 1 true
+effect give @a[predicate=mcf:common/player/not_player] minecraft:night_vision 1000000 1 true
+
+## Tell position
+execute as @a run function mcf:system/common/set_position/main

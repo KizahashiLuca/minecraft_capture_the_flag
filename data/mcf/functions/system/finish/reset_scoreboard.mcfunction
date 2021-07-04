@@ -146,6 +146,8 @@ scoreboard objectives remove SqrtXYZ
 scoreboard objectives remove SqrtVarI
 scoreboard objectives remove SqrtVarX
 scoreboard objectives remove SneakTime
+## Remove scoreboards for war phase - bell
+scoreboard objectives remove BellTick
 
 ## Reset objectives
 scoreboard players reset #mcf

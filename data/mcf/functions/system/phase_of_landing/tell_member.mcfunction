@@ -11,7 +11,7 @@
 ## Send member setting messages
 tellraw @a ["",{"text":"-----------------------------","color":"white"}]
 tellraw @a ["",{"text":" RED TEAM","color":"red","bold":true}]
-tellraw @a ["",{"text":"  "},{"selector":"@a[team=TeamA]"}]
+tellraw @a ["",{"text":"  "},{"selector":"@a[predicate=mcf:common/player/team_a]]"}]
 tellraw @a ["",{"text":"","color":"white"}]
 tellraw @a ["",{"text":" BLUE TEAM","color":"blue","bold":true}]
-tellraw @a ["",{"text":"  "},{"selector":"@a[team=TeamB]"}]
+tellraw @a ["",{"text":"  "},{"selector":"@a[predicate=mcf:common/player/team_b]"}]

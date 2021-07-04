@@ -9,11 +9,11 @@
 #############################################################
 
 ## Set world border
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_WorldSpawn,limit=1] run worldborder center ~ ~
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_WorldSpawn,limit=1] if score #mcf WorldBorder matches 100..500 run function mcf:system/phase_of_waiting/world_border/branch_100_500
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_WorldSpawn,limit=1] if score #mcf WorldBorder matches 600..1000 run function mcf:system/phase_of_waiting/world_border/branch_600_1000
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_WorldSpawn,limit=1] if score #mcf WorldBorder matches 1100..1500 run function mcf:system/phase_of_waiting/world_border/branch_1100_1500
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_WorldSpawn,limit=1] if score #mcf WorldBorder matches 1600..2000 run function mcf:system/phase_of_waiting/world_border/branch_1600_2000
+execute at @e[predicate=mcf:common/spawnpoint/world_spawn] run worldborder center ~ ~
+execute at @e[predicate=mcf:common/spawnpoint/world_spawn] if score #mcf WorldBorder matches 100..500 run function mcf:system/phase_of_waiting/world_border/branch_100_500
+execute at @e[predicate=mcf:common/spawnpoint/world_spawn] if score #mcf WorldBorder matches 600..1000 run function mcf:system/phase_of_waiting/world_border/branch_600_1000
+execute at @e[predicate=mcf:common/spawnpoint/world_spawn] if score #mcf WorldBorder matches 1100..1500 run function mcf:system/phase_of_waiting/world_border/branch_1100_1500
+execute at @e[predicate=mcf:common/spawnpoint/world_spawn] if score #mcf WorldBorder matches 1600..2000 run function mcf:system/phase_of_waiting/world_border/branch_1600_2000
 ## Reset world
 time set 0
 weather clear

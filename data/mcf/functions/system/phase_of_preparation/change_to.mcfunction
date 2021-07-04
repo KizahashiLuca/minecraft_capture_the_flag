@@ -18,34 +18,32 @@ tellraw @a ["",{"text":" Preparation Start","color":"red","bold":true}]
 function mcf:system/common/message_end
 
 ## Set gamemode
-gamemode survival @a[tag=MCF_Player]
+gamemode survival @a[predicate=mcf:common/player]
 execute if score #mcf Difficulty matches 1 run difficulty easy
 execute if score #mcf Difficulty matches 2 run difficulty normal
 execute if score #mcf Difficulty matches 3 run difficulty hard
 
 ## Spawnpoint
-execute as @p[team=TeamA,tag=MCF_Leader] at @s align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Spawn","MCF_TeamA"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamA,limit=1] run spawnpoint @a[team=TeamA] ~ ~ ~
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamA,limit=1] run forceload add ~ ~
+execute as @p[predicate=mcf:common/leader/team_a] at @s align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Spawn","MCF_TeamA"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
+execute at @e[predicate=mcf:common/spawnpoint/team_a] run function mcf:system/phase_of_preparation/spawnpoint/team_a
 
 ## Spawnpoint
-execute as @p[team=TeamB,tag=MCF_Leader] at @s align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Spawn","MCF_TeamB"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamB,limit=1] run spawnpoint @a[team=TeamB] ~ ~ ~
-execute at @e[type=minecraft:area_effect_cloud,tag=MCF_Spawn,tag=MCF_TeamB,limit=1] run forceload add ~ ~
+execute as @p[predicate=mcf:common/leader/team_b] at @s align xyz run summon minecraft:area_effect_cloud ~0.5 ~ ~0.5 {Tags:["MCF_Spawn","MCF_TeamB"],NoGravity:1b,Invulnerable:1b,Particle:"minecraft:block minecraft:air",Radius:0.5f,Duration:2147483647}
+execute at @e[predicate=mcf:common/spawnpoint/team_b] run function mcf:system/phase_of_preparation/spawnpoint/team_b
 
 ## Kill entities
 kill @e[type=minecraft:area_effect_cloud,tag=MCF_Teleporter]
 
 ## Clear inventory
-clear @a[tag=MCF_Player]
-effect clear @a[tag=MCF_Player]
+clear @a[predicate=mcf:common/player]
+effect clear @a[predicate=mcf:common/player]
 
 ## Give items
-loot give @a[tag=MCF_Player,tag=MCF_Leader] loot mcf:phase_of_preparation/banner
-loot give @a[tag=MCF_Player,tag=MCF_Leader] loot mcf:phase_of_preparation/trader_of_arms
-loot give @a[tag=MCF_Player,tag=MCF_Leader] loot mcf:phase_of_preparation/trader_of_armors
-loot give @a[tag=MCF_Player,tag=MCF_Leader,team=TeamA] loot mcf:phase_of_preparation/trader_of_special_items_team_a
-loot give @a[tag=MCF_Player,tag=MCF_Leader,team=TeamB] loot mcf:phase_of_preparation/trader_of_special_items_team_b
+loot give @a[predicate=mcf:common/leader] loot mcf:phase_of_preparation/banner
+loot give @a[predicate=mcf:common/leader] loot mcf:phase_of_preparation/trader_of_arms
+loot give @a[predicate=mcf:common/leader] loot mcf:phase_of_preparation/trader_of_armors
+loot give @a[predicate=mcf:common/leader/team_a] loot mcf:phase_of_preparation/trader_of_special_items_team_a
+loot give @a[predicate=mcf:common/leader/team_b] loot mcf:phase_of_preparation/trader_of_special_items_team_b
 
 ## Set scoreboards
 scoreboard players set @a[tag=MCF_Player] UseCrossbow 0

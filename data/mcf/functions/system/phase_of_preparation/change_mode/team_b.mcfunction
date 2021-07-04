@@ -8,10 +8,8 @@
 ## This work is licensed under a CC BY-SA 4.0 license.     ##
 #############################################################
 
-## Log in the mid of the game
-#### Set tags
-tag @a[tag=MCF_Player,team=!TeamA,team=!TeamB] remove MCF_Player
-#### Set gamemode
-gamemode spectator @a[team=!TeamA,team=!TeamB,gamemode=!spectator]
-#### Set effect
-effect give @a[tag=!MCF_Player] minecraft:night_vision 1000000 1 true
+## Clear egg
+clear @a[predicate=mcf:common/player/team_b] minecraft:bat_spawn_egg{Tags:["MCFitem"]}
+## Change mode
+gamemode adventure @a[predicate=mcf:common/player/team_b]
+execute unless entity @e[predicate=mcf:common/banner/team_b] as @a[predicate=mcf:common/leader/team_b] at @s run function mcf:system/phase_of_preparation/banner/set_banner

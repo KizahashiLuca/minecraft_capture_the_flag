@@ -9,15 +9,15 @@
 #############################################################
 
 ## Set inventory
-clear @a[tag=MCF_Player]
+clear @a[predicate=mcf:common/player]
 ## Set experience
-experience set @a[tag=MCF_Player] 0 levels
-experience set @a[tag=MCF_Player] 0 points
+experience set @a[predicate=mcf:common/player] 0 levels
+experience set @a[predicate=mcf:common/player] 0 points
 ## Set effect
-effect clear @a[tag=MCF_Player]
-effect give @a[tag=MCF_Player] minecraft:resistance 1000000 6 true
-effect give @a[tag=MCF_Player] minecraft:slow_falling 1000000 3 true
-effect give @a[tag=MCF_Player] minecraft:invisibility 1000000 1 true
+effect clear @a[predicate=mcf:common/player]
+effect give @a[predicate=mcf:common/player] minecraft:resistance 1000000 6 true
+effect give @a[predicate=mcf:common/player] minecraft:slow_falling 1000000 3 true
+effect give @a[predicate=mcf:common/player] minecraft:invisibility 1000000 1 true
 ## Set advancements
 advancement revoke @a everything
 ## Take recipes

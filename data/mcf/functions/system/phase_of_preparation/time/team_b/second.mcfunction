@@ -22,7 +22,7 @@ scoreboard players operation #mcf_blue RestSecond += #mcf_blue Second
 
 ## Calculate number of player
 scoreboard players set #mcf_blue NumParticipantTp 0
-execute as @a[team=TeamB] run scoreboard players add #mcf_blue NumParticipantTp 1
+execute as @a[predicate=mcf:common/player/team_b] run scoreboard players add #mcf_blue NumParticipantTp 1
 scoreboard players operation #mcf_blue NumParticipantTp *= #mcf 1000
 scoreboard players operation #mcf_blue NumParticipantTp /= #mcf_blue NumParticipant
 
@@ -40,11 +40,11 @@ execute if score #mcf_blue NumParticipantTp matches ..200 run scoreboard players
 execute if score #mcf_blue NumParticipantTp matches ..100 run scoreboard players set #mcf_blue CountTick 200
 
 ## Store time for bossbar
-bossbar set minecraft:bossbar_blue players @a[team=TeamB]
+bossbar set minecraft:bossbar_blue players @a[predicate=mcf:common/player/team_b]
 execute if score #mcf_blue Minute matches 0.. run bossbar set minecraft:bossbar_blue name ["",{"text":"PREPARATION TIME","color":"dark_purple","bold":true},{"text":" : "},{"score":{"name":"#mcf_blue","objective":"Minute"},"color":"green","bold":true},{"text":" min. "},{"score":{"name":"#mcf_blue","objective":"Second"},"color":"green","bold":true},{"text":" sec."}]
 execute store result bossbar minecraft:bossbar_blue value run scoreboard players get #mcf_blue RestSecond
 
 ## Process the sound system
-execute if score #mcf_blue Minute matches 0 if score #mcf_blue Second matches 4..10 as @a[team=TeamB] at @s run playsound minecraft:item.trident.return master @s ~ ~ ~ 1 1 1
-execute if score #mcf_blue Minute matches 0 if score #mcf_blue Second matches 1..3 as @a[team=TeamB] at @s run playsound minecraft:item.trident.throw master @s ~ ~ ~ 1 1 1
-execute if score #mcf_blue Minute matches 0 if score #mcf_blue Second matches 0 as @a[team=TeamB] at @s run playsound minecraft:item.trident.thunder master @s ~ ~ ~ 1 1 1
+execute if score #mcf_blue Minute matches 0 if score #mcf_blue Second matches 4..10 as @a[predicate=mcf:common/player/team_b] at @s run playsound minecraft:item.trident.return master @s ~ ~ ~ 1 1 1
+execute if score #mcf_blue Minute matches 0 if score #mcf_blue Second matches 1..3 as @a[predicate=mcf:common/player/team_b] at @s run playsound minecraft:item.trident.throw master @s ~ ~ ~ 1 1 1
+execute if score #mcf_blue Minute matches 0 if score #mcf_blue Second matches 0 as @a[predicate=mcf:common/player/team_b] at @s run playsound minecraft:item.trident.thunder master @s ~ ~ ~ 1 1 1

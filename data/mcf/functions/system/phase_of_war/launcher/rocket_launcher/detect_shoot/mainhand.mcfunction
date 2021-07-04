@@ -9,7 +9,7 @@
 #############################################################
 
 ## Replace item
-replaceitem entity @s weapon.mainhand minecraft:air
+loot replace entity @s weapon.mainhand loot mcf:phase_of_preparation/air
 
 ## Play sound
 playsound entity.item.break player @a ~ ~ ~ 1.0 1.0

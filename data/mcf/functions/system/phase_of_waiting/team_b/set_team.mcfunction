@@ -9,7 +9,7 @@
 #############################################################
 
 ## Add a tag
-tag @p[team=TeamB,sort=random] add MCF_Leader
+tag @p[predicate=mcf:common/player/team_b,sort=random] add MCF_Leader
 
 ## Set teamrule
 function mcf:system/phase_of_waiting/team_b/set_rule

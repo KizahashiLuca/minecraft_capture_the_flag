@@ -8,10 +8,12 @@
 ## This work is licensed under a CC BY-SA 4.0 license.     ##
 #############################################################
 
-## Log in the mid of the game
-#### Set tags
-tag @a[tag=MCF_Player,team=!TeamA,team=!TeamB] remove MCF_Player
-#### Set gamemode
-gamemode spectator @a[team=!TeamA,team=!TeamB,gamemode=!spectator]
-#### Set effect
-effect give @a[tag=!MCF_Player] minecraft:night_vision 1000000 1 true
+## Kill bell
+kill @e[predicate=mcf:phase_of_preparation/bell/bell_drop,sort=nearest,limit=1]
+
+## Spawn banner
+execute as @s[tag=MCF_TeamA] at @s run loot spawn ~ ~ ~ loot mcf:phase_of_preparation/items/bell_team_a
+execute as @s[tag=MCF_TeamB] at @s run loot spawn ~ ~ ~ loot mcf:phase_of_preparation/items/bell_team_b
+
+## Kill cloud
+kill @s

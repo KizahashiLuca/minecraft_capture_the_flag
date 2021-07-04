@@ -1,0 +1,21 @@
+{
+  "type": "generic",
+  "pools":[
+    {
+      "rolls":1,
+      "entries":[
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:armor_stand",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"警報ベル\",\"italic\":false}'},EntityTag:{Tags:[\"MCF_Bell\",\"MCF_TeamA\"]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
